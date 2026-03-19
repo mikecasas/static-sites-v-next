@@ -1,0 +1,23 @@
+﻿<div class="container pt-125">
+
+
+<h3>F.A.Q.</h3>
+
+@if (FAQs == null)
+{
+    
+} else
+{
+    @foreach (var i in FAQs)
+    {
+        <PublicSitesClient.Components.FaqItem FAQ="@i"></PublicSitesClient.Components.FaqItem>        
+    }
+}
+</div>
+
+
+@code {
+
+    [Parameter]
+    public IEnumerable<FrequentlyAskedQuestions> FAQs { get; set; }
+}

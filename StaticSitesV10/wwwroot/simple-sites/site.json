@@ -1,0 +1,107 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": true,
+  "DisplayProduct": true,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "HeroItem": {
+    "Title": "Simple Sites",
+    "SubTitle": "Website templates to get started online.",
+    "ImageUrl": "simple-sites.jpg",
+    "ActionTitle": null,
+    "ActionUrl": null,
+    "LayoutModule": ""
+  },
+  "AboutUsItem": {
+    "Title": "",
+    "SubTitle": "",
+    "ItemList": [ "Mobile Friendly Templates" ],
+    "ListHeader": null,
+    "ListFooter": null,
+    "MainImageUrl": "about_us.jpg",
+    "SubImageUrl": null,
+    "Item1Title": "Starter Service Contract",
+    "Item2Title": "Our History",
+    "Item1Description": "$75 dollars for our starter template, which includes one year of Internet hosting. If you need more advanced features for your website, we can accomplish this with our custom templates.",
+    "Item2Description": "We are a team of technology professionals that have worked in and consulted for a wide range of businesses and organizations of all sizes. Clients kept approaching us to build them a 'simple' website at an affordable price."
+  },
+  "Email": "info@codebuoy.dev",
+  "Phone": "",
+  "SiteTitle": "Simple Sites",
+  "HighlightTitle": "Website Templates",
+  "HighlightSubTitle": "Quality and Affordable Website Templates for your Business or Personal Site",
+  "HighlightItems": [
+    {
+      "Title": "Affordable Price",
+      "Descr": "$75 for our starter template. We can get your site online fast without breaking the bank.",
+      "Icon": "coins",
+      "IconCss": "fas fa-coins fa-stack-1x fa-inverse"
+    },   
+    {
+      "Title": "Services",
+      "Descr": "We are a full fledged technology shop and can provide other services for your business including integrations and process automation. Email us for more information and pricing.",
+      "Icon": "cogs",
+      "IconCss": "fas fa-cogs fa-stack-1x fa-inverse"
+    }
+  ],
+  "ProductTitle": "Template Examples",
+  "ProductItems": [
+    {
+      "Title": "Pool Companies",
+      "Descr": "",
+      "Price": "",
+      "ImageUrl": "pool.jpg",
+      "ActionButtonText": "View Example",
+      "ActionButtonUrl": "https://pool.codebuoy.dev",
+      "UseModal": false
+    },
+    {
+      "Title": "Lawn Service",
+      "Descr": "",
+      "Price": "",
+      "ImageUrl": "lawn.jpg",
+      "ActionButtonText": "View Example",
+      "ActionButtonUrl": "https://lawn.codebuoy.dev",
+      "UseModal": false
+    },
+    {
+      "Title": "Small Retail",
+      "Descr": "",
+      "Price": "",
+      "ImageUrl": "shop.jpg",
+      "ActionButtonText": "View Example",
+      "ActionButtonUrl": "https://shop.codebuoy.dev",
+      "UseModal": false
+    },
+    {
+      "Title": "Restaurant",
+      "Descr": "",
+      "Price": "",
+      "ImageUrl": "restaurant.jpg",
+      "ActionButtonText": "View Example",
+      "ActionButtonUrl": "https://restaurant.codebuoy.dev",
+      "UseModal": false
+    },
+    {
+      "Title": "Video Project",
+      "Descr": "",
+      "Price": "",
+      "ImageUrl": "video.jpg",
+      "ActionButtonText": "View Example",
+      "ActionButtonUrl": "https://video.codebuoy.dev",
+      "UseModal": false
+    }
+  ],
+  "Blogs": [],
+  "Keywords": "small business web templates"
+}

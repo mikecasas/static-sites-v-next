@@ -1,0 +1,69 @@
+﻿<div class="b-example-divider"></div>
+
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase mb-4">@Title</h2>
+            <h3 class="section-subheading text-muted mb-4">@SubTitle</h3>
+        </div>
+
+        @if (HighlightItems is not null)
+        {
+            @if ((ItemCount == 3) || (ItemCount == 6) || (ItemCount == 9))
+            {
+                <div class="row text-center">
+
+                    @foreach (var i in HighlightItems)
+                    {
+                        <div class="col-md-4">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="@i.IconCss"></i>
+                            </span>
+                            <h4 class="my-3">@i.Title</h4>
+                            <p class="lead">@i.Descr</p>
+                        </div>
+                    }
+                </div>
+               
+            }else
+            {
+                <div class="row text-center">
+
+                     @foreach (var i in HighlightItems)
+                    {
+                        <div class="col-md-4">
+                            <span class="fa-stack fa-4x">
+                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                                <i class="@i.IconCss"></i>
+                            </span>
+                            <h4 class="my-3">@i.Title</h4>
+                            <p class="lead">@i.Descr</p>
+                        </div>
+                    }
+                 
+                </div>              
+            }
+        }
+    </div>
+</section>
+
+<div class="b-example-divider"></div>
+
+@code {
+    private int ItemCount = 0;
+    private int IntemCounter = 1;
+
+    [Parameter]
+    public string? Title { get; set; }
+    [Parameter]
+    public string? SubTitle { get; set; }
+
+    [Parameter]
+    public IEnumerable<HighlightItem>? HighlightItems { get; set; }
+
+    protected override void OnInitialized()
+    {
+        ItemCount = HighlightItems.Count();
+    }
+}

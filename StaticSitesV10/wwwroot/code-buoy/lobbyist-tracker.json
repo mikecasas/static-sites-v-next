@@ -1,0 +1,88 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": true,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "Keywords": "lobbyist|open gov|record lobbyist interaction|public officials|government transparency|local government",
+  "HeroItem": {
+    "TenantName": "code-buoy",
+    "Title": "Lobbyist Tracker",
+    "SubTitle": "A cloud based SaaS software solution to track and record your Public Officials interactions with Lobbyists",
+    "ImageUrl": "/products/lobbyist-info_compressed_15.jpg",
+    "ActionTitle": "Email Us",
+    "ActionUrl": "mailto:info@codebuoy.dev",
+    "LayoutModule": "RightAligned"
+  },
+  "AboutUsItem": {
+    "TenantName": "code-buoy",
+    "Title": "",
+    "SubTitle": "",
+    "ItemList": [ "Complete software solution running in the cloud", "No Software to install", "Simple pricing structure", "Powerful Features for Accountability", " Export to CSV or PDF" ],
+    "ListHeader": null,
+    "ListFooter": null,
+    "MainImageUrl": "/bg.jpg",
+    "SubImageUrl": null,
+    "Item1Title": "What is Lobbyist Tracker?",
+    "Item2Title": "Our Company",
+    "Item1Description": "Lobbyist Tracker is a SaaS platform built to enhance government transparency. It enables agencies, lobbyists, and journalists to record and analyze all public official interactions in one place.",
+    "Item2Description": "We are a team of software developers and technology professionals who have extensive experience working in local governments developing software solutions."
+  },
+  "Email": "info@codebuoy.dev",
+  "Phone": "",
+  "SiteTitle": "Lobbyist Tracker",
+  "HighlightTitle": "Key Product Features",
+  "HighlightSubTitle": "",
+  "Blogs": [],
+  "ProductTitle": "SaaS Software Solution",
+  "ProductItems": [],
+  "PriceItem": {
+    "Title": "Lobbyist Tracker Pricing",
+    "Descr": "Initial contract is for three years",
+    "PriceTitle": "Annual License Fee",
+    "ActualPrice": "$22,000",
+    "FeatureCallouts": [ "Payable on a yearly or monthly basis","Hosted on our servers", "* Certain data limits apply" ]
+  },
+  "HighlightItems": [
+    {
+      "Title": "Track Interactions",
+      "Descr": "Log meetings, calls, and correspondence between lobbyists and officials for transparent reporting.",
+      "IconName": "users"
+    },
+    {
+      "Title": "Transparency",
+      "Descr": "Track, manage, and report every interaction between lobbyists and public officials — all in one secure SaaS platform.",
+      "IconName": "search"
+    },
+    {
+      "Title": "Generate Reports",
+      "Descr": "Instantly export detailed summaries for compliance and auditing purposes.",
+      "IconName": "file-download"
+    },
+    {
+      "Title": "Cloud-Based Security",
+      "Descr": "All records are stored safely in the cloud, with encryption and role-based access.",
+      "IconName": "cloud"
+    },
+    {
+      "Title": "Admin Dashboard",
+      "Descr": "View statistics about all interactions in simple to view graphs and charts.",
+      "IconName": "tachometer-alt"
+    },
+    {
+      "Title": "Continuous Updates",
+      "Descr": "New product features and improvements are rolled out every 90 days.",
+      "IconName": "wrench"
+    }
+  ]
+}

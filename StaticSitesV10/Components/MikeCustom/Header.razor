@@ -1,0 +1,114 @@
+﻿<!-- ======= Header ======= -->
+
+<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="img/logo.png" alt=""> -->
+            <h1>@Title<span>.</span></h1>
+        </a>
+
+        <nav id="navbar" class="navbar">
+
+              <ul>
+            @foreach (var m in MenuLinks)
+            {
+
+                    @if(m.Level2 == null || m.Level2.Count() == 0)
+                    {
+                        <li><a href="#@m.Level1.Link">@m.Level1.Text</a></li>
+                    } else
+                    {
+                        <li class="dropdown">
+
+                            <a href="#"><span>@m.Level1.Text</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+
+                                @foreach (var mm in m.Level2)
+                                {
+                                    <li><a href="#@mm.Link">@mm.Text</a></li>
+                                }                                
+                               
+                            </ul>
+                        </li>
+                    }
+                }
+              </ul>
+
+            @*<ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#chefs">Chefs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>*@
+        </nav><!-- .navbar -->
+
+        <a class="btn-book-a-table" href="#book-a-table">Book a Table</a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+</header><!-- End Header -->
+
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    private IEnumerable<HeaderMenuItem> MenuLinks;
+
+    protected override void OnInitialized()
+    {     
+        var jj1 = new HeaderMenuLink { Text= "Sales", Link="#sales"};
+        var jj2 = new HeaderMenuLink { Text = "Marketing", Link = "#mmmm" };
+
+        var ll = new List<HeaderMenuLink>();
+        ll.Add(jj1);
+        ll.Add(jj2);
+
+
+        var dd = new HeaderMenuItem();
+        dd.Level1 = new HeaderMenuLink { Text = "Products", Link = "" };
+        dd.Level2 = ll;
+
+
+        var ee = new HeaderMenuItem();
+        ee.Level1 = new HeaderMenuLink { Text = "Home", Link = "home" };
+
+        var yy = new HeaderMenuItem();
+        yy.Level1 = new HeaderMenuLink { Text = "About Us", Link = "home" };
+    
+        var ff = new List<HeaderMenuItem>();
+        ff.Add(ee);
+        ff.Add(dd);
+        ff.Add(yy);
+
+        MenuLinks = ff;
+
+        //await base.OnParametersSetAsync();
+        //ClaimsId = ClaimsId ?? -1; // set default value if not set via routing or input
+    }
+}

@@ -1,0 +1,16 @@
+﻿
+<div class="video-page">
+    <div class="video-container">
+        <iframe src="@VideoUrl"
+                title="YouTube video player"
+                frameborder="0"
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string? VideoUrl { get; set; }
+}

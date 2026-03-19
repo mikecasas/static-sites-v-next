@@ -1,0 +1,36 @@
+﻿<div class="b-example-divider"></div>
+
+<div class="hero-container">
+
+    @if (HeroItem is null)
+    {
+        <h3>No Hero Stuff</h3>
+    }else
+    {
+        <div class="hero" style="background-image: url(@HeroItem.FullImageUrl); linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"></div>
+
+        <div class="hero-stuff">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">@HeroItem.Title</h1>
+                    <br />
+                    <h4 class="mb-3">@HeroItem.SubTitle</h4>
+
+                    @if (!string.IsNullOrEmpty(HeroItem.ActionTitle))
+                    {
+                        <h4 class="mb-3">@HeroItem.ActionTitle</h4>
+                        <a class="btn btn-primary btn-lg" href="@HeroItem.ActionUrl" role="button">@HeroItem.ActionTitle</a>
+                    }
+
+                </div>
+            </div>
+        </div>
+    }  
+
+</div>
+
+@code {
+
+    [Parameter]
+    public HeroItemVm? HeroItem { get; set; }
+}

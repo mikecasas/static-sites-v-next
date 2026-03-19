@@ -1,0 +1,78 @@
+﻿@layout EmptyLayout
+@page "/change-theme"
+
+@inject NavigationManager Nav
+@inject IJSRuntime JsRuntime
+
+<h3>Change Theme (Toggle example between two default themes)</h3>
+
+<button type="button" class="btn btn-warning" @onclick="ChangeGlobalThemeAsync">
+    <span class="oi oi-clock" aria-hidden="true"></span> Change Theme</button>
+
+<h3>@ThemeName</h3>
+
+<StaticSitesV10.Components.MikeCustom.Blogz.BlogSingle></StaticSitesV10.Components.MikeCustom.Blogz.BlogSingle>
+
+@code {
+
+    const string DefaultTheme = "theme-1";
+    const string SecondTheme = "theme-2";
+
+    bool IsTheme1;
+    string ThemeName = DefaultTheme;
+
+    bool value;
+    bool disabledValue = true;
+
+    IJSObjectReference? Module;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     Module = await JsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/dynamicThemes.js");
+    // }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender){
+            Module = await JsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/dynamicThemes.js");
+        }      
+    }
+
+    void OnChange(bool? value, string name)
+    {
+        //console.Log($"{name} value changed to {value}");
+    }
+
+    private async Task ChangeGlobalThemeAsync()
+    {
+        //Clear message if it exists.
+        //AddModuleMessage("", MessageType.Error);
+
+        //_forgotDisplay = "card";
+        //HideControls();
+
+        ThemeName = IsTheme1 ? DefaultTheme : SecondTheme;
+        IsTheme1 = !IsTheme1;
+
+        //calling JS function
+        //var module = await _jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/dynamicThemes.js");
+        //await Module.InvokeVoidAsync("setGlobalTheme", ThemeName);
+
+        await Module.InvokeVoidAsync("setGlobalTheme", ThemeName);
+    }
+
+    private async Task UpdateTheme()
+    {
+        //setting the themeName parameter
+        //var themeName = _settingsViewModel.DarkTheme ? "dark" : "light";
+
+        ThemeName = IsTheme1 ? DefaultTheme : SecondTheme;
+
+        //calling JS function
+        //var module = await _jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/dynamicThemes.js");
+        await Module.InvokeVoidAsync("setGlobalTheme", ThemeName);
+
+        //persisting the settings in DB
+        //await _settingsViewModel.UpdateTheme();
+    }
+}

@@ -1,0 +1,57 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "HeroItem": {
+    "TenantName": "demo-pool",
+    "Title": "A.J.'s Pool Service",
+    "SubTitle": "Keeping South Florida pools sparkling clean",
+    "ImageUrl": "/pool-example_compressed_25.jpg",
+    "ActionTitle": null,
+    "LayoutModule": ""
+  },
+  "AboutUsItem": {
+    "TenantName": "demo-pool",
+    "Title": "",
+    "SubTitle": "We've been cleaning South Florida pools for over 25 years.",
+    "ItemList": [ "Dependable", "Trustworthy", "We use all natural chemicals" ],
+    "ListHeader": null,
+    "ListFooter": null,
+    "MainImageUrl": "/pool-about_us_compressed_25.jpg",
+    "SubImageUrl": null,
+    "Item1Title": "Standard Residental Service Contract",
+    "Item2Title": "Our History",
+    "Item1Description": "One standard price for our weekly service. We clean your pool and keep your water in perfect balance.",
+    "Item2Description": "What started out cleaning one pool has turned into cleaning over 1,000 pools each month in South Florida."
+  },
+  "Email": "pools@example.com",
+  "Phone": "555-555-5555",
+  "SiteTitle": "A.J's Pools",
+  "HighlightTitle": "",
+  "HighlightSubTitle": "",
+  "HighlightItems": [],
+  "ProductItems": null,
+  "Blogs": [
+    {
+      "Title": "Blog 1",
+      "Descr": "Blog 1 Detail"
+    },
+    {
+      "Title": "Blog 2",
+      "Descr": "Blog 2 Detail"
+    }
+  ],
+  "Keywords": "pool|pool cleaning|pool service"
+}

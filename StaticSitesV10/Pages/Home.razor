@@ -1,0 +1,272 @@
+﻿@layout EmptyLayout
+
+@page "/home"
+@page "/home/{Tenant}"
+@page "/home/{Tenant}/{PageId}"
+
+@inject ComponentManagement CompMan
+
+@* @rendermode InteractiveServer *@
+
+@inject HttpClient Http
+@inject IJSRuntime _jsRuntime
+
+<PageTitle>Home</PageTitle>
+
+@if (SiteStructure == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <PageTitle>@SiteStructure.SiteTitle</PageTitle>
+    <StaticSitesV10.Components.MikeCustom.SeoHeader Title=@SiteStructure.SiteTitle Overview="MyHomePage" Keywords="@PageKeywords"></StaticSitesV10.Components.MikeCustom.SeoHeader>
+
+    @if (SiteStructure.DisplayTopHeader)
+    {
+        <StaticSitesV10.Components.MikeCustom.HeaderTop Phone="@SiteStructure.Phone" Email="@SiteStructure.Email"></StaticSitesV10.Components.MikeCustom.HeaderTop>
+    }
+
+    @if (SiteStructure.DisplayHeader)
+    {
+        <StaticSitesV10.Components.MikeCustom.Header2 Title="Header"></StaticSitesV10.Components.MikeCustom.Header2>
+    }    
+
+    @if (SiteStructure.DisplayHero)
+    {
+        <div class="col-3">
+
+            <select class="form-control" @bind="SelectedHero" @bind:after="ChangeHero">
+
+                <option value="">Select a value</option>
+                @foreach (var c in PublicComponents)
+                {
+                    <option value="@c.Key">@c.Value.Name</option>
+                }
+            </select>
+        </div>
+
+        //Check to see if there a layout!!!
+        @if(string.IsNullOrEmpty(SiteStructure.HeroItem?.LayoutModule)){
+
+            //assign the default template
+            SetHeroComponent("LargeHero");
+
+        }else {
+
+            //Use the layout in the json file
+            SetHeroComponent(SiteStructure.HeroItem.LayoutModule);
+        }
+
+        @if ((SelectedComponent is not null) && (SiteStructure.HeroItem is not null))
+        {
+
+            @* css classes removed  border border-primary my-1 p-1*@
+
+            <div>
+                <DynamicComponent Type="SelectedComponent.Type" Parameters="SelectedComponent.Parameters" />
+            </div>
+        }
+
+    }
+
+    @if (SiteStructure.DisplayVideo)
+    {
+        <StaticSitesV10.Components.MikeCustom.EmbeddedVideo VideoUrl="@SiteStructure.EmbeddedVideoUrl"></StaticSitesV10.Components.MikeCustom.EmbeddedVideo>
+    }
+
+    @if (SiteStructure.DisplayFaq)
+    {
+        <StaticSitesV10.Components.MikeCustom.Faq FAQs="@SiteStructure.FAQs"></StaticSitesV10.Components.MikeCustom.Faq>
+    }
+
+    @if (SiteStructure.DisplayHighlights)
+    {
+        <StaticSitesV10.Components.MikeCustom.Highlights Title="@SiteStructure.HighlightTitle" SubTitle="@SiteStructure.HighlightSubTitle" HighlightItems="@SiteStructure.HighlightItems"></StaticSitesV10.Components.MikeCustom.Highlights>
+    }
+
+    @if (SiteStructure.DisplayAbout)
+    {
+        <StaticSitesV10.Components.MikeCustom.About AboutUsItem="@AboutUsVm"></StaticSitesV10.Components.MikeCustom.About>
+    }
+
+    @if (SiteStructure.DisplayBlog)
+    {
+        <StaticSitesV10.Components.MikeCustom.Blogz.BlogMulti BlogItems="@SiteStructure.Blogs"></StaticSitesV10.Components.MikeCustom.Blogz.BlogMulti>
+    }
+
+    @if (SiteStructure.DisplayProduct)
+    {
+        <StaticSitesV10.Components.MikeCustom.ProductLarge Title="@SiteStructure.ProductTitle" ProductGroup="@TheProductGroup"></StaticSitesV10.Components.MikeCustom.ProductLarge>
+    }
+
+    @if (SiteStructure.DisplayPrices)
+    {
+        <StaticSitesV10.Components.MikeCustom.Prices Price="75" Email="@SiteStructure.Email" PriceItem="@SiteStructure.PriceItem"></StaticSitesV10.Components.MikeCustom.Prices>
+    }
+
+    @if (SiteStructure.DisplayReservation)
+    {
+        <StaticSitesV10.Components.MikeCustom.Reservation></StaticSitesV10.Components.MikeCustom.Reservation>
+    }
+
+    @if (SiteStructure.DisplayTestamonial)
+    {
+        <StaticSitesV10.Components.MikeCustom.Testamonials></StaticSitesV10.Components.MikeCustom.Testamonials>
+    }
+
+    @if (SiteStructure.DisplayStaff)
+    {
+        <StaticSitesV10.Components.MikeCustom.Staff StaffBlock="@SiteStructure.StaffBlock" ></StaticSitesV10.Components.MikeCustom.Staff>
+    }
+
+    @if (SiteStructure.DisplayEvents)
+    {
+        <StaticSitesV10.Components.MikeCustom.Events></StaticSitesV10.Components.MikeCustom.Events>
+    }
+
+    @if (SiteStructure.DisplayGallery)
+    {
+        <StaticSitesV10.Components.MikeCustom.GalleryComponent Gallery="@SiteStructure.Gallery"></StaticSitesV10.Components.MikeCustom.GalleryComponent>
+    }
+
+    @if (SiteStructure.DisplayFooter)
+    {
+        <StaticSitesV10.Components.MikeCustom.Footer Phone="@SiteStructure.Phone" Email="@SiteStructure.Email" PhysicalAddress="@PhyAddress"></StaticSitesV10.Components.MikeCustom.Footer>
+    }    
+}
+
+@code{
+    bool IsTheme1;
+    string ThemeName = "theme-1";
+    string PhyAddress = string.Empty;
+
+    int VideoWidth = 400;
+    int VideoHeight = 400;
+
+    AboutUsItemVm? AboutUsVm;
+
+    string? SelectedHero;
+
+    [Parameter]
+    public string? PageId { get; set; }
+
+    [Parameter]
+    public string? Tenant { get; set; }
+
+    SiteStructure? SiteStructure;
+
+    List<AttributeValue>? SiteElements;
+
+    AboutUsItem? AboutUs;
+    ProductGroup? TheProductGroup;
+
+    IJSObjectReference? module;
+
+    IEnumerable<string>? PageKeywords;
+
+    private string CacheBustId = "?v=2025-11-09-1233313";
+    private ComponentMetadata? SelectedComponent;
+
+    Dictionary<string, ComponentMetadata>? PublicComponents;
+
+    protected override async Task OnInitializedAsync()
+    {    
+        //module = await _jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/dynamicThemes.js?v=x");
+
+        await GetSiteStructure();
+
+        PhyAddress = "Miami, Florida";
+
+        var Keywords = new List<string>();
+        var K = SiteStructure.KeyWords.Split("|");
+
+        if(K is not null){
+            Keywords.AddRange(K.ToList());
+            PageKeywords = Keywords;
+        }
+
+        if (SiteStructure.DisplayHero)
+        {
+            var HeroVm = new HeroItemVm(Tenant, SiteStructure.HeroItem);
+            InitializeHeroControls(HeroVm, "LargeHero");
+        }      
+    } 
+
+    private void InitializeHeroControls(HeroItemVm hero, string controlName)
+    {
+        InitComponents(hero);      
+        SelectedComponent = PublicComponents[controlName];
+    }
+
+    private void SetHeroComponent(string controlName){
+
+        SelectedComponent = PublicComponents[controlName];
+    }
+
+    void InitComponents(HeroItemVm hero)
+    {        
+        //Taken From
+        //https://learn.microsoft.com/en-us/aspnet/core/blazor/components/dynamiccomponent?view=aspnetcore-9.0
+
+        PublicComponents = CompMan.GetHeroComponents(hero);
+    }
+
+    private async Task ChangeTheme(string tenantId)
+    {
+        await module.InvokeVoidAsync("clearGlobalTheme");
+        await module.InvokeVoidAsync("clearTenantTheme");
+        await module.InvokeVoidAsync("setTenantTheme", tenantId);
+    }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        await base.OnParametersSetAsync();
+        //await GetSiteStructure();
+    }
+
+    private async Task GetSiteStructure()
+    {
+        string LocalTenant = string.Empty;
+        string JsonFileName = string.Empty;
+        SiteStructure = null;
+        string S = Guid.NewGuid().ToString();
+
+        if (string.IsNullOrEmpty(Tenant))
+            LocalTenant = "demo-demo";
+        else
+            LocalTenant = Tenant;
+
+        if (string.IsNullOrEmpty(PageId))
+            JsonFileName = "site";
+        else
+            JsonFileName = PageId;
+
+        string RelativeLocation = $"/{LocalTenant}";
+        string Url = $"{RelativeLocation}/{JsonFileName}.json{CacheBustId}";
+
+        var TempSiteStructure = await Http.GetFromJsonAsync<SiteStructure>(Url);
+
+        SetProducts(TempSiteStructure, RelativeLocation);
+      
+        SiteStructure = TempSiteStructure;               
+
+        SiteStructure.EmbeddedVideoUrl = "https://www.youtube.com/embed/nhAnKAV38VI";
+
+        AboutUsVm = new AboutUsItemVm(Tenant, SiteStructure?.AboutUsItem); 
+    }    
+
+    private void SetProducts(SiteStructure site,string relativeLocation)
+    {
+        TheProductGroup = new ProductGroup();
+        TheProductGroup.LeadingPath = relativeLocation;
+        TheProductGroup.Products = site.ProductItems;
+        TheProductGroup.SetValues();
+    }
+
+    public async Task ChangeHero()
+    {
+        await Task.Delay(20);
+        SiteStructure?.HeroItem.LayoutModule = SelectedHero;
+    }
+}

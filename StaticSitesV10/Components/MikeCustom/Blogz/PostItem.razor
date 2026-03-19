@@ -1,0 +1,47 @@
+﻿
+@if(BlogItems != null)
+{
+    <div class="row mb-2">
+
+        @foreach(var i in BlogItems)
+        {
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        @*  <strong class="d-inline-block mb-2 text-primary">World</strong>*@
+
+
+                        @if (@i.ReleasedOn.ToShortDateString()=="1/1/0001"){
+                            <h6 class="mb-0">1/1/2025</h6> <br />
+                        }else {
+                            <h6 class="mb-0">@i.ReleasedOn.ToLongDateString()</h6> <br />
+                        }
+
+
+                      
+                        <h3 class="mb-0">@i.Title</h3> <br />
+                        <div class="mb-1 text-muted">@i.Descr</div> <br /> <br />
+                        @*             <p class="card-text mb-5">@i.Descr</p>*@
+
+                        <div>
+
+                            @if (!(string.IsNullOrEmpty(i.ButtonText)))
+                            {
+                                <a href="@i.Url" class="stretched-link btn btn-primary">@i.ButtonText</a>
+                            }
+                        </div>
+
+                    </div>
+                    @* <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            </div>*@
+                </div>
+            </div>   
+    }
+    </div>
+}
+
+@code {
+    [Parameter]
+    public IEnumerable<BlogItem>? BlogItems { get; set; }
+}

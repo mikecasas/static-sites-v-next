@@ -1,0 +1,19 @@
+﻿
+
+<div class="container-fluid">
+
+    <h3>@FAQ.Question</h3>
+
+    @foreach(var i in FAQ.Answers)
+    {
+        <p class="lead">@i</p>
+    }
+
+</div>
+
+@code {
+    
+    [Parameter]
+    public FrequentlyAskedQuestions FAQ { get; set; }
+
+}

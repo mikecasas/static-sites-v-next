@@ -1,0 +1,89 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": true,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": false,
+  "DisplayAbout": true,
+  "HeroItem": {
+    "TenantName": "demo-demo",
+    "Title": "Italiano Miami",
+    "SubTitle": "World Class Italian food in Miami",
+    "ImageUrl": "/image-0_compressed_25.jpg",
+    "ActionTitle": null
+  },
+  "AboutUsItem": {
+    "TenantName" : "demo-demo",
+    "Title": "",
+    "SubTitle": "",
+    "ItemList": null,
+    "ListHeader": null,
+    "ListFooter": null,
+    "MainImageUrl": "/about_us_compressed_25.jpg",
+    "SubImageUrl": null,
+    "Item1Title": "Delicious Italian food for over 30 years",
+    "Item2Title": "Our History",
+    "Item1Description": "Our restaurant is family owned for over 30 years",
+    "Item2Description": "Our Chefs use Mama's recipes from the old country with the freshest of ingredients."
+  },
+  "Email": "italiano@example.com",
+  "Phone": "555-555-5555",
+  "SiteTitle": "Italiano Miami",
+  "HighlightTitle": "Our Dishes",
+  "HighlightSubTitle": "",
+  "HighlightItems": null,
+  "ProductItems": null,
+  "Blogs": [
+    {
+      "Title": "Blog 1",
+      "Descr": "Your detailed blog 1 goes here."
+    },
+    {
+      "Title": "Blog 2",
+      "Descr": "Your detailed blog 2 goes here."
+    }
+  ],
+  "Gallery": [
+    {
+      "Title": "Eggplant",
+      "Descr": "Our House Specality",
+      "ImageUrl": "/gallery/image_1.jpg"
+    },
+    {
+      "Title": "Mussels",
+      "Descr": "Our House Specality",
+      "ImageUrl": "/gallery/image_2.jpg"
+    },
+    {
+      "Title": "Mussels",
+      "Descr": "Our House Specality",
+      "ImageUrl": "/gallery/image_3.jpg"
+    },
+    {
+      "Title": "Pizza",
+      "Descr": "Our House Specality",
+      "ImageUrl": "/gallery/image_4.jpg"
+    },
+    {
+      "Title": "Spaghetti",
+      "Descr": "Our House Specality",
+      "ImageUrl": "/gallery/image_5.jpg"
+    },
+    {
+      "Title": "Linguini & Clams",
+      "Descr": "Our House Specality",
+      "ImageUrl": "/gallery/image_6.jpg"
+    }
+  ],
+
+  "Keywords": "dog|cat|fish"
+}

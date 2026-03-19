@@ -1,0 +1,49 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": false,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": false,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": false,
+  "DisplayAbout": false,
+  "DisplayVideo": true,
+  "DisplayFaq": false,
+  "HeroItem": null,
+  "AboutUsItem": null,
+  "Email": "video@example.com",
+  "Phone": "",
+  "SiteTitle": "Video Production",
+  "HighlightTitle": "",
+  "HighlightSubTitle": "",
+  "HighlightItems": [],
+  "ProductTitle": "",
+  "Products": [],
+  "FAQs": [
+    {
+      "question": "How do you think is the best Major League Baseball Mascot?",
+      "answers": [ "The Phillie Phanatic?", "The San Diego Chicken?" ]
+    }
+  ],
+
+  "Blogs": [
+    {
+      "releasedOn": "2023-10-08",
+      "title": "Host Blazor WASM Dirt Cheap",
+      "descr": "With so many differnt ways of hosting Blazor WASM apps, I looked at how I can host my static site for the cheapest price each month."
+    },
+    {
+      "releasedOn": "2023-02-13",
+      "title": "How to uninstall old versions of .NET Core",
+      "descr": "Uninstalling old versions of .NET Core used to be a tedious process, so much that I still had previews of 2.0 installed. But now it's super easy thanks to the newly released .NET Core Uninstall Tool. Have a look at how it works…"
+    }
+  ],
+  "Keywords": ""
+}

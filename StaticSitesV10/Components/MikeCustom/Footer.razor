@@ -1,0 +1,171 @@
+﻿<div class="container-fluid bg-dark footer mt-5 py-5">
+    <div class="container py-2">
+        <div class="row g-5">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                <h5 class="text-white mb-4">Our Location</h5>
+
+                <div class="text-white py-2 px-5">
+                    <span class="fs-5 fw-bold me-2">
+                        <i class="fa fa-map-marker-alt me-2"></i>
+                    </span>
+                    <span class="fs-5 fw-bold">@PhysicalAddress</span>                   
+                </div>
+
+               @* <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>*@
+              @*  <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>*@
+               @* <div class="d-flex pt-3">
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>*@
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                <h5 class="text-white mb-4">Quick Contact Links</h5>
+
+                @if (string.IsNullOrEmpty(Phone))
+                {
+
+                }
+                else
+                {
+                    <div class="text-white py-2 px-5">
+                        <span class="fs-5 fw-bold me-2">
+                            <i class="fa fa-phone me-2"></i>
+                        </span>
+                        <span class="fs-5 fw-bold">@Phone</span>
+                    </div>
+                }                                               
+
+                <div class="text-white d-none d-md-flex">
+
+                    <div class="text-white ">
+                        <span class="fs-5 fw-bold me-2">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="fs-5 fw-bold">@Email</span><br />
+                        <span class="fs-5 fw-bold text-white mb-3 pt-3"><a href="@EmailLink" style="color:white">Email Us</a></span>
+                    </div>
+
+                </div>
+
+                <div class="text-white d-flex d-md-none">
+                   @*  Display only on small *@
+                    <div class="text-white ">
+                        <span class="fs-5 fw-bold me-2">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                        <span class="fs-5 fw-bold">@Email</span><br />
+                        <span class="fs-5 fw-bold text-white mb-3 pt-3"><a href="@EmailLink" style="color:white">Email Us</a></span>
+                    </div>
+
+                </div>
+
+             @*   <a class="btn btn-link" href="">About Us</a>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Our Services</a>
+                <a class="btn btn-link" href="">Terms & Condition</a>
+                <a class="btn btn-link" href="">Support</a>*@
+            </div>
+          @*  <div class="col-lg-4 col-md-6">
+                <h5 class="text-white mb-4">Business Hours</h5>
+                <p class="mb-1">Monday - Friday</p>
+                <h6 class="text-light">09:00 am - 07:00 pm</h6>
+                <p class="mb-1">Saturday</p>
+                <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                <p class="mb-1">Sunday</p>
+                <h6 class="text-light">Closed</h6>
+            </div>*@
+           <div class="col-lg-3 col-md-6">
+                <h3 class="text-white mb-4"><a href="https://codebuoy.dev">Code Buoy</a></h3>
+                <h5 class="text-white mb-4"><a href="https://simple-sites.codebuoy.dev">A <u>Simple Sites</u> template</a></h5>
+             @*    <h5 class="text-white mb-4">Tesckow Technology</h5>
+                <p>A <a href="/tenants/03">Simple Sites</a>Template</p> *@
+
+
+               
+
+
+               @* <div class="position-relative w-100">
+                   <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="">
+                   <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                        SignUp
+                    </button>
+                </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+
+    [Parameter]
+    public ContactItem? ContactItem { get; set; }
+
+    [Parameter]
+    public string? Phone { get; set; }
+
+    [Parameter]
+    public string? Email { get; set; }
+
+    [Parameter]
+    public string? PhysicalAddress { get; set; }
+
+    private string EmailLink = "";
+
+    protected override void OnInitialized()
+    {
+        EmailLink = "mailto:" + Email;
+
+        if (ContactItem == null)
+        {
+            var l = new ContactItem();
+
+            l.Email = "home@home.com";
+            //l.SubTitle = "sdfsfsdfsdsdfsd";
+            //l.ImageUrl = @"img/hero/pen-1.jpg";
+            //l.ActionTitle = "Call Us";
+
+            ContactItem = l;
+        }
+        //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+    }
+
+
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    await Task.Delay(3);
+
+    //    if (ContactItem == null)
+    //    {
+    //        var l = new ContactItem();
+
+    //        l.Email = "home@home.com";
+    //        //l.SubTitle = "sdfsfsdfsdsdfsd";
+    //        //l.ImageUrl = @"img/hero/pen-1.jpg";
+    //        //l.ActionTitle = "Call Us";
+
+    //        ContactItem = l;
+    //    }
+    //    //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+    //}
+}
+
+
+
+
+@*   Scale by the view port!!!!
+<h1 style="font-size:8vw;">Hello World</h1>
+<p style="font-size:2vw;">Resize the browser window to see how the font size scales.</p> *@

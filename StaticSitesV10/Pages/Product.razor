@@ -1,0 +1,68 @@
+﻿@layout EmptyLayout
+
+@page "/product/{Tenant}/{PageId}"
+
+@inject HttpClient Http
+@inject IJSRuntime JsRuntime
+
+<h3>Product</h3>
+@if (ProductStructure == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h3>@ProductStructure.ProductName</h3>
+}
+
+@code {
+
+    [Parameter]
+    public string? Tenant { get; set; }
+
+    [Parameter]
+    public string? PageId { get; set; }
+
+    ProductStructure? ProductStructure;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetProductStructure();
+
+        // PhyAddress = "Miami, Florida";
+
+        // var Keywords = new List<string>();
+        // var K = SiteStructure.KeyWords.Split("|");
+
+        // Keywords.AddRange(K.ToList());
+        // PageKeywords = Keywords;
+    }
+
+    private async Task GetProductStructure()
+    {
+        string LocalTenant = "";
+
+        ProductStructure = null;
+
+        if (string.IsNullOrEmpty(Tenant))
+            LocalTenant = "";
+        else
+            LocalTenant = Tenant;
+
+
+        string Url = $"{Tenant}/{PageId}-product.json";
+
+        ProductStructure = await Http.GetFromJsonAsync<ProductStructure>(Url);
+
+        // TheProductGroup = new ProductGroup();
+        // TheProductGroup.LeadingPath = RelativeLocation;
+        // TheProductGroup.Products = TempSiteStructure.ProductItems;
+        // TheProductGroup.SetValues();
+
+        // SiteStructure = TempSiteStructure;
+
+        // SiteStructure.EmbeddedVideoUrl = "https://www.youtube.com/embed/nhAnKAV38VI";
+        // //SiteStructure.EmbeddedVideoUrl = "https://www.youtube.com/embed/5gWMlWzjKmU";
+    }
+
+}

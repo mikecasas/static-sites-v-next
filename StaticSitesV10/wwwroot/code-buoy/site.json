@@ -1,0 +1,96 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": true,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": false,
+  "DisplayProduct": true,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "Email": "info@codebuoy.dev",
+  "Phone": "",
+  "SiteTitle": "Code Buoy - We build custom software and SaaS solutions",
+  "Keywords": "local government|free consulting|small business|technology|web sites|software development|sass|gfoa|erp integration|erp integration|api integration",
+  "HeroItem": {
+    "TenantName": "code-buoy",
+    "Title": "Code Buoy",
+    "SubTitle": "Software & Technology solutions geared toward Small Business and Local Government",
+    "ImageUrl": "/bg_compressed_25.jpg",
+    "ActionTitle": null
+  },
+  "AboutUsItem": {
+    "TenantName": "code-buoy",
+    "Title": "",
+    "SubTitle": "",
+    "ItemList": [ "Business & Personal Websites", "Invoicing & Payments", "Scheduling & Appointment applications", "API Integration", "Data Conversion", "Custom Software Development", "All U.S. Based" ],
+    "ListHeader": null,
+    "ListFooter": null,
+    "MainImageUrl": "/about_us_compressed_25.jpg",
+    "SubImageUrl": null,
+    "Item1Title": "Our History",
+    "Item2Title": "",
+    "Item1Description": "We are a team of technology professionals that have developed software solutions and consulted for a wide range of businesses and organizations of all sizes.",
+    "Item2Description": ""
+  },
+  "HighlightTitle": "Software & Technology Services",
+  "HighlightSubTitle": "Quality and Affordable Technology Solutions for your Business",
+  "HighlightItems": [
+    {
+      "Title": "Services",
+      "Descr": "We are a full fledged technology shop and can provide a wide range of technology services for your business including integrations and process automation.",
+      "IconName": "cogs"
+    },
+    {
+      "Title": "Affordable Prices",
+      "Descr": "Most technology needs for businesses have already been developed, so we can solve your issue without breaking the bank. We strive to be fair and honest.",
+      "IconName": "coins"
+    },
+    {
+      "Title": "Responsive",
+      "Descr": "We know time is money, so if we cannot accomplish your goal, we will tell you up front. We will not try and sell you products and services you do not need.",
+      "IconName": "tachometer-alt"      
+    }
+  ],
+  "Blogs": [
+    {
+      "Title": "Free Consulting for Small Business",
+      "Descr": "We love entrepreneurship! We believe the economy is driven by small and medium-sized businesses, and we want them to thrive. To support your efforts, we offer free virtual consulting on Fridays to discuss any aspects of technology impacting your organization. Our niche is using technology to make your business operate more efficiently. Whether that’s automating a routine process or making different systems talk to each other, we are here to help. Reach out to us via email to schedule a meeting.",
+      "ReleasedOn": "2024-05-03T00:00:00",
+      "Url": "/free-friday-consulting",
+      "ButtonText": "Read More"
+    }
+  ],
+  "ProductTitle": "Custom Application Portfolio",
+  "ProductItems": [
+    {
+      "Title": "Lobbyist Tracker",
+      "Descr": "Record interactions between Lobbyists and Public Officials",
+      "Price": "",
+      "ImageUrl": "/products/lobbyist-tracker.png",
+      "ActionButtonText": "More Info",
+      "ActionButtonUrl": "https://codebuoy.dev/lobbyist-tracker"
+    },
+    {
+      "Title": "Simple Sites",
+      "Descr": "$75 Website Templates to get online fast",
+      "Price": "",
+      "ImageUrl": "/products/simple-sites.png",
+      "ActionButtonText": "More Info",
+      "ActionButtonUrl": "https://simple-sites.codebuoy.dev"
+    }
+  ],
+  "PriceItem": {
+    "Title": "Simple Sites Pricing",
+    "Descr": "Our Starter template is sufficient to build an effective 'one page' website (similiar to the page you are on now) displaying the most important information for your customers. You provide us the content and images and we upload it to our servers.",
+    "PriceTitle": "Starter",
+    "ActualPrice": "9.99",
+    "FeatureCallouts": [ "Includes Hosting for one year" ]
+  }
+}

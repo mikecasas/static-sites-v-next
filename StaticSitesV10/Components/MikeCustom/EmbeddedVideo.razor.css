@@ -1,0 +1,36 @@
+﻿/* Page background and centering */
+.video-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Video wrapper */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+    /* Responsive iframe */
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+    }
+
+    /* Optional hover effect */
+    .video-container:hover {
+        transform: scale(1.01);
+        transition: transform 0.3s ease;
+    }

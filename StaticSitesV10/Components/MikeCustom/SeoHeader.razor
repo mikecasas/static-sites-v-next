@@ -1,0 +1,68 @@
+﻿@inject IJSRuntime JS
+
+<PageTitle>@(GetTitle())</PageTitle>
+<HeadContent>
+    <meta Name="keywords" Content="@GetKeywords()" />
+    <meta Property="og:title" Content="@GetTitle()" />
+    <meta Name="twitter:title" Content="@GetTitle()" />
+    @if (!string.IsNullOrEmpty(Overview))
+    {
+        <meta Name="description" Content="@GetSubTitle()" />
+        <meta Property="og:description" Content="@GetSubTitle()" />
+        <meta Name="twitter:description" Content="@GetSubTitle()" />
+    }
+</HeadContent>
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? Overview { get; set; }
+
+    [Parameter]
+    public IEnumerable<string> Keywords { get; set; } = new List<string>();
+
+    private bool _parametersSet;
+
+    string GetTitle() => Title is null ? "Code Buoy" : $"{Title}";
+
+    protected override void OnParametersSet() => _parametersSet = true;
+
+    string GetSubTitle()
+    {
+        if (string.IsNullOrEmpty(Overview))
+            return "";
+        return Overview.TrimEnd('.') + ".";
+    }
+
+    string GetKeywords()
+    {
+        if (Keywords is null || !Keywords.Any())
+        {
+            //Nothing to do
+            return string.Empty;
+        }else
+        {
+            var keywords = new List<string>();
+
+            keywords.AddRange(Keywords);
+
+            //keywords.Add("lukeparkerdev");
+            //keywords.Add("mudblazor");
+            //keywords.Add("blazor");
+
+            return string.Join(", ", keywords);
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (_parametersSet && firstRender)
+        {
+            await JS.InvokeVoidAsync("fullyRendered", true);
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}

@@ -1,0 +1,93 @@
+﻿@if (ProductGroup != null)
+{
+    <StaticSitesV10.Components.MikeCustom.Modals.BasicModal></StaticSitesV10.Components.MikeCustom.Modals.BasicModal>
+    
+    <section style="background-color: #eee;">
+        <div class="text-center container py-5">
+
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase mb-4">@Title</h2>
+            </div>
+
+            <div class="row">
+
+
+                @if (ProductGroup.FullProducts is not null)
+                {
+
+                    @foreach (var i in ProductGroup.FullProducts)
+                    {
+                        <div class="col-lg-6 col-md-12 mb-6">
+                            <div class="card mb-5">
+
+                                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light">
+                                    <img src="@i.ImageUrl" class="w-100 mb-4 product-item" alt="" />
+
+                                    @*  <div class="mask">
+                        <div class="d-flex justify-content-start align-items-end h-100">
+                        <h5><span class="badge bg-primary ms-2">New</span></h5>
+                        <h5><span class="badge bg-success ms-2">Eco</span></h5>
+                        <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+                        </div>
+                        </div>*@
+                                    <div class="hover-overlay">
+                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-body pb-0 mb-5">
+                                    <h3 class="card-title font-weight-bold mb-3"><a>@i.Title</a></h3>
+
+                                    @* <p class="lead"><strong>Tonight's availability</strong></p>*@
+                                    <p class="lead card-text">
+                                        @i.Descr
+                                    </p>
+
+                                    @if (string.IsNullOrEmpty(i.Price))
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        <h6 class="display-6 mb-3">@i.Price</h6>
+                                    }
+
+                                    @if (string.IsNullOrEmpty(i.ActionButtonText))
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        if (i.UseModal)
+                                        {
+                                            <button class="btn btn-primary" @onclick="() => Modal.Open()">@i.ActionButtonText</button>
+                                        }
+                                        else
+                                        {
+                                            <a href="@i.ActionButtonUrl" class="btn btn-primary">@i.ActionButtonText</a>
+                                        }
+
+                                    }
+
+                                </div>
+
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+}
+
+@code {
+
+    private StaticSitesV10.Components.MikeCustom.Modals.BasicModal? Modal { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public ProductGroup? ProductGroup { get; set; }
+}

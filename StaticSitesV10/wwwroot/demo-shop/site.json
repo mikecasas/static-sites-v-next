@@ -1,0 +1,82 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": false,
+  "DisplayProduct": true,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "HeroItem": {
+    "TenantName": "demo-shop",
+    "Title": "Small Retail Site",
+    "SubTitle": "Small online selling portal",
+    "ImageUrl": "/ecom-1_compressed_25.jpg?v=12",
+    "ActionTitle": null,
+    "LayoutModule": ""
+  },
+  "AboutUsItem": null,
+  "Email": "myretail@example.com",
+  "Phone": "",
+  "SiteTitle": "My Retail Site",
+  "HighlightTitle": "Small Ecommerce Site",
+  "HighlightSubTitle": "List Your Products here, Sell on Amazon with a link",
+  "HighlightItems": [],
+  "ProductTitle": "Our Products",
+  "ProductItems": [
+    {
+      "Title": "Headphones",
+      "Descr": "Noise Cancelling",
+      "Price": "$24.99",
+      "ImageUrl": "/products/headphone.jpg",
+      "ActionButtonText": "More Information",
+      "ActionButtonUrl": "",
+      "UseModal":  true
+    },
+    {
+      "Title": "Heels",
+      "Descr": "Imported from Italy",
+      "Price": "$99.00",
+      "ImageUrl": "/products/heels.jpg",
+      "ActionButtonText": "More Information",
+      "ActionButtonUrl": "",
+      "UseModal": true
+    },
+    {
+      "Title": "Shoelaces",
+      "Descr": "Non Synthetic Plastic",
+      "Price": "$1.25",
+      "ImageUrl": "/products/shoelace.jpg",
+      "ActionButtonText": "More Information",
+      "ActionButtonUrl": "",
+      "UseModal": true
+    },
+    {
+      "Title": "Watch",
+      "Descr": "Great Present for Dad",
+      "Price": "$10.00",
+      "ImageUrl": "/products/watch.jpg",
+      "ActionButtonText": "More Information",
+      "ActionButtonUrl": "",
+      "UseModal": true
+    }
+  ],
+  "Blogs": [
+    {
+      "Title": "Blog 1",
+      "Descr": "sdfdsf   sddsfds sf sdf"
+    },
+    {
+      "Title": "Blog 2",
+      "Descr": "sdsfsdsdfdsfsdf"
+    }
+  ],
+  "Keywords": ""
+}

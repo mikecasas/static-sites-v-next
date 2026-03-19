@@ -1,0 +1,60 @@
+﻿
+<div class="container">
+    <div class="row py-5">
+       @* <div class="col-lg-1 d-none d-lg-flex align-items-center">
+            <div class="lc-block d-flex" style="writing-mode: vertical-rl; transform:rotate(180deg)">
+                <a class="btn btn-link my-2 text-dark text-decoration-none" href="#" role="button">Facebook</a>
+                <a class="btn btn-link my-4 text-dark text-decoration-none" href="#" role="button">Twitter</a>
+                <a class="btn btn-link my-2 text-dark text-decoration-none" href="#" role="button">Youtube</a>
+            </div>
+        </div>*@
+       @* <div class="col-sm-6 d-flex d-lg-none flex-sm-column align-items-center justify-content-around mb-4 mb-sm-0">
+            <div class="lc-block">
+                <a class="btn btn-link text-dark text-decoration-none" href="#" role="button">Facebook</a>
+
+            </div>
+            <div class="lc-block">
+                <a class="btn btn-link text-dark text-decoration-none" href="#" role="button">Twitter</a>
+
+            </div>
+            <div class="lc-block">
+                <a class="btn btn-link text-dark text-decoration-none" href="#" role="button">Youtube</a>
+
+            </div>
+        </div>*@
+        <div class="col-lg-4 col-sm-6">
+
+
+            <div class="lc-block ratio ratio-1x1">
+                <img style="object-fit:cover" class="img-fluid" src="@HeroItem.FullImageUrl" alt="Palm Tree">
+            </div>
+
+            @*<div class="lc-block ratio ratio-1x1">
+                <img style="object-fit:cover" class="img-fluid" src="/tenants/site-99/img/palm-tree.jpg?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8N3x8d29tYW58ZW58MHwwfHx8MTYzNDU2NTUxOA&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 " alt="Photo by Atikh Bana">
+            </div>*@
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+            <div class="lc-block my-5">
+                <div editable="rich">
+                    <h2 class="rfs-25">@HeroItem.Title</h2>
+                </div>
+            </div>
+            <div class="lc-block my-5">
+                <div editable="rich">
+                    <p>@HeroItem.SubTitle</p>
+                </div>
+            </div><!-- /lc-block -->
+            @*<div class="lc-block">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Contact Us</a>
+            </div>*@
+            <!-- /lc-block -->
+        </div>
+        <!-- /col -->
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public HeroItemVm? HeroItem { get; set; }
+}

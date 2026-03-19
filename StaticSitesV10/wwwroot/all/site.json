@@ -1,0 +1,83 @@
+{
+  "DisplayStaff": true,
+  "DisplayBlog": true,
+  "DisplayContact": true,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": true,
+  "DisplayTopHeader": true,
+  "DisplayHeader": true,
+  "DisplayHero": true,
+  "DisplayPrices": true,
+  "DisplayProduct": true,
+  "DisplayReservation": true,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "DisplayVideo": false,
+  "DisplayFaq": false,
+    "HeroItem": {
+        "layoutModule": "",
+        "tenantName": "all",
+        "title": "The Palm Guy",
+        "subTitle": "South Florida Palms",
+        "imageUrl": "/palm-tree.jpg",
+        "actionTitle": "Click Me",
+        "actionUrl": "/foo"
+    },
+    "StaffBlock": {
+        "title": "Staff",
+        "subtitle": "sfsfd",
+        "staffPeople": [
+            {
+                "fullName": "Mike",
+                "title": "Programmer",
+                "descr": "20 years of exp",
+                "imageUrl": "mike.jpg"
+            },
+            {
+                "fullName": "Bob",
+                "title": "Programmer",
+                "descr": "20 years of exp",
+                "imageUrl": "mike.jpg"
+            },
+            {
+                "fullName": "John",
+                "title": "Programmer",
+                "descr": "20 years of exp",
+                "imageUrl": "mike.jpg"
+            }
+        ]
+    },
+  "AboutUsItem": null,
+  "Email": "video@example.com",
+  "Phone": "",
+  "SiteTitle": "This is my site....",
+  "HighlightTitle": "Cool Highligght",
+  "HighlightSubTitle": "my ssubbbt",
+  "HighlightItems": [],
+  "ProductTitle": "",
+  "Products": [],
+  "FAQs": [
+    {
+      "question": "How do you think is the best Major League Baseball Mascot?",
+      "answers": [ "The Phillie Phanatic?", "The San Diego Chicken?" ]
+    }
+  ],
+
+  "Blogs": [
+    {
+      "releasedOn": "2023-10-08",
+      "title": "Host Blazor WASM Dirt Cheap",
+        "descr": "With so many differnt ways of hosting Blazor WASM apps, I looked at how I can host my static site for the cheapest price each month.",
+        "url": "/foor/ooo",
+        "buttonText": "Click More Info"
+    },
+    {
+      "releasedOn": "2023-02-13",
+      "title": "How to uninstall old versions of .NET Core",
+      "descr": "Uninstalling old versions of .NET Core used to be a tedious process, so much that I still had previews of 2.0 installed. But now it's super easy thanks to the newly released .NET Core Uninstall Tool. Have a look at how it works…"
+    }
+  ],
+  "Keywords": ""
+}

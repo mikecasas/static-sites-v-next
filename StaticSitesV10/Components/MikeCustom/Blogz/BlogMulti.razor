@@ -1,0 +1,47 @@
+﻿   <!-- ======= Blog Section ======= -->
+<section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+            <div class="col-lg-12">
+
+                <div class="row gy-4 posts-list">
+
+                    <div class="col-lg-12">
+                        <StaticSitesV10.Components.MikeCustom.Blogz.PostItem BlogItems="@BlogItems"></StaticSitesV10.Components.MikeCustom.Blogz.PostItem>
+                    </div><!-- End post list item -->
+                                      
+
+                </div><!-- End blog posts list -->
+               
+                @if (DisplayPagination == true)
+                {
+                    <div class="blog-pagination">
+                        <ul class="justify-content-center">
+                            <li><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- End blog pagination -->
+                }              
+
+            </div>
+
+            <div class="col-lg-4">
+                <StaticSites.Components.Blogz.BlogSidebar DisplaySidebar="false"></StaticSites.Components.Blogz.BlogSidebar>             
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Blog Section -->
+
+@code {
+    private bool DisplayPagination = false;
+
+    [Parameter]
+    public IEnumerable<BlogItem>? BlogItems {get; set; }
+}

@@ -1,0 +1,386 @@
+﻿@if (ProductItems != null)
+{
+    <section style="background-color: #eee;">
+        <div class="text-center container py-5">
+          
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase mb-4">@Title</h2>
+            </div>
+
+            <div class="row">               
+
+                @foreach(var i in ProductItems)
+                {
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card">
+
+                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" >
+                              <img src="@i.ImageUrl" class="w-100 mb-4 product-item mt-12 pt-12" />
+
+                                <div class="mask">
+                                    <div class="d-flex justify-content-start align-items-end h-100">
+                                        <h5><span class="badge bg-primary ms-2">New</span></h5>
+                                        <h5><span class="badge bg-success ms-2">Eco</span></h5>
+                                        <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+                                    </div>
+                                </div>
+                                <div class="hover-overlay">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                </div>                               
+                            </div>
+                                                    
+                            <div class="card-body pb-0">
+                                <h5 class="card-title font-weight-bold mb-3"><a>@i.Title</a></h5>
+
+                               @* <p class="lead"><strong>Tonight's availability</strong></p>*@
+                                <p class="lead card-text">
+                                    @i.Descr
+                                </p>
+
+                                @if (string.IsNullOrEmpty(i.Price))
+                                {
+                                    
+                                }else
+                                {
+                                    <h6 class="display-6 mb-3">@i.Price</h6>
+                                }                               
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+}
+
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public IEnumerable<IndividualProduct>? Products { get; set; }
+
+    private IEnumerable<IndividualProduct>? ProductItems;
+
+    protected override void OnInitialized()
+    {  
+
+        if (Products == null)
+        {
+            string RouteP1 = "tenants/00/img/products/";
+
+            var p = new List<IndividualProduct>();
+
+            var IndivItems = new List<IndividualProduct>();
+            var p11 = new IndividualProduct();
+
+            p11.Title = "Shoelaces";
+            p11.Descr = "Great quality and price";
+            p11.Price = "$12.45";
+            p11.ImageUrl = $"{RouteP1}shoelace.jpg";
+
+            var p22 = new IndividualProduct();
+
+            p22.Title = "Heels";
+            p22.Descr = "Imported from Italy";
+            p22.Price = "$6.45";
+            p22.ImageUrl = $"{RouteP1}heels.jpg";
+
+            var p33 = new IndividualProduct();
+
+            p33.Title = "Watch";
+            p33.Descr = "New release of the XJ-5";
+            p33.Price = "Call for Quote";
+            p33.ImageUrl = $"{RouteP1}watch.jpg";
+
+            IndivItems.Add(p11);
+            IndivItems.Add(p22);
+            IndivItems.Add(p33);
+
+            ProductItems = IndivItems;
+        }
+        else
+        {
+            ProductItems = Products;
+        }
+
+
+
+       
+
+
+
+        //var p1 = new ProductItem();
+        //p1.Category = "Main";
+        //p1.Products = IndivItems;
+
+        //var p2 = new ProductItem();
+        //p2.Category = "Second";
+        //p2.Products = IndivItems;
+
+        //var p3 = new ProductItem();
+        //p3.Category = "Third";
+        //p3.Products = IndivItems;
+
+        //p.Add(p1);
+        //p.Add(p2);
+        //p.Add(p3);
+
+        //ProductItems = p;
+           
+        //}
+        //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+    }
+
+
+
+
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    await Task.Delay(3);
+
+    //    var p = new List<ProductItem>();
+
+    //    //if (HeroItem == null)
+    //    //{
+
+    //    var p11 = new IndividualProduct();
+
+    //    p11.Title = "Dog Bed";
+    //    p11.Descr = "Comfy";
+    //    p11.Price = "$12.45";
+
+    //    var p22 = new IndividualProduct();
+
+    //    p11.Title = "Coffee Cup";
+    //    p11.Descr = "dsfsdfdsf sdf sdf sdfsdfsdf sdfsdf sdfsdf sdf";
+    //    p11.Price = "$6.45";
+
+
+    //    var IndivItems = new List<IndividualProduct>();
+    //    IndivItems.Add(p11);
+    //    IndivItems.Add(p22);
+
+    //    var p1 = new ProductItem();
+    //    p1.Category = "Main";
+    //    p1.Products = IndivItems;
+
+    //    var p2 = new ProductItem();
+    //    p2.Category = "Second";
+    //    p2.Products = IndivItems;
+
+    //    var p3 = new ProductItem();
+    //    p3.Category = "Third";
+    //    p3.Products = IndivItems;
+
+
+    //    p.Add(p1);
+    //    p.Add(p2);
+    //    p.Add(p3);
+
+    //    ProductItems = p;
+
+
+    //    //}
+    //    //forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+    //}
+
+}
+
+
+
+
+
+
+@*
+    Template FROM https://mdbootstrap.com/docs/standard/extended/product-cards/
+*@
+@*<section style="background-color: #eee;">
+    <div class="text-center container py-5">
+        <h4 class="mt-4 mb-5"><strong>Bestsellers</strong></h4>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card">
+                    <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                         data-mdb-ripple-color="light">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp"
+                             class="w-100" />
+                        <a href="#!">
+                            <div class="mask">
+                                <div class="d-flex justify-content-start align-items-end h-100">
+                                    <h5><span class="badge bg-primary ms-2">New</span></h5>
+                                </div>
+                            </div>
+                            <div class="hover-overlay">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="" class="text-reset">
+                            <h5 class="card-title mb-3">Product name</h5>
+                        </a>
+                        <a href="" class="text-reset">
+                            <p>Category</p>
+                        </a>
+                        <h6 class="mb-3">$61.99</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                         data-mdb-ripple-color="light">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
+                             class="w-100" />
+                        <a href="#!">
+                            <div class="mask">
+                                <div class="d-flex justify-content-start align-items-end h-100">
+                                    <h5><span class="badge bg-success ms-2">Eco</span></h5>
+                                </div>
+                            </div>
+                            <div class="hover-overlay">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="" class="text-reset">
+                            <h5 class="card-title mb-3">Product name</h5>
+                        </a>
+                        <a href="" class="text-reset">
+                            <p>Category</p>
+                        </a>
+                        <h6 class="mb-3">$61.99</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp"
+                             class="w-100" />
+                        <a href="#!">
+                            <div class="mask">
+                                <div class="d-flex justify-content-start align-items-end h-100">
+                                    <h5><span class="badge bg-danger ms-2">-10%</span></h5>
+                                </div>
+                            </div>
+                            <div class="hover-overlay">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="" class="text-reset">
+                            <h5 class="card-title mb-3">Product name</h5>
+                        </a>
+                        <a href="" class="text-reset">
+                            <p>Category</p>
+                        </a>
+                        <h6 class="mb-3">
+                            <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card">
+                    <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(23).webp"
+                             class="w-100" />
+                        <a href="#!">
+                            <div class="mask">
+                                <div class="d-flex justify-content-start align-items-end h-100">
+                                    <h5>
+                                        <span class="badge bg-success ms-2">Eco</span><span class="badge bg-danger ms-2">-10%</span>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="hover-overlay">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="" class="text-reset">
+                            <h5 class="card-title mb-3">Product name</h5>
+                        </a>
+                        <a href="" class="text-reset">
+                            <p>Category</p>
+                        </a>
+                        <h6 class="mb-3">
+                            <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light" data-mdb-ripple-color="light">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(17).webp" class="w-100" />
+                        <a href="#!">
+                            <div class="mask">
+                                <div class="d-flex justify-content-start align-items-end h-100"></div>
+                            </div>
+                            <div class="hover-overlay">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="" class="text-reset">
+                            <h5 class="card-title mb-3">Product name</h5>
+                        </a>
+                        <a href="" class="text-reset">
+                            <p>Category</p>
+                        </a>
+                        <h6 class="mb-3">$61.99</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(30).webp"
+                             class="w-100" />
+                        <a href="#!">
+                            <div class="mask">
+                                <div class="d-flex justify-content-start align-items-end h-100">
+                                    <h5>
+                                        <span class="badge bg-primary ms-2">New</span><span class="badge bg-success ms-2">Eco</span><span class="badge bg-danger ms-2">-10%</span>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="hover-overlay">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="" class="text-reset">
+                            <h5 class="card-title mb-3">Product name</h5>
+                        </a>
+                        <a href="" class="text-reset">
+                            <p>Category</p>
+                        </a>
+                        <h6 class="mb-3">
+                            <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>*@

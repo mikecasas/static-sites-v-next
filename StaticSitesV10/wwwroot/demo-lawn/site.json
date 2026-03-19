@@ -1,0 +1,61 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": true,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "HeroItem": {
+    "TenantName": "demo-lawn",
+    "Title": "Louie's Lawn",
+    "SubTitle": "Landscaping & Lawn Servicing Experts",
+    "ImageUrl": "/bg_lawn_compressed_25.jpg",
+    "ActionTitle": null,
+    "LayoutModule": ""
+  },
+  "AboutUsItem": {
+    "TenantName": "demo-lawn",
+    "Title": "",
+    "SubTitle": "We've been maintaining South Florida lawns and landscapes for over 25 years.",
+    "ItemList": [ "Dependable", "Trustworthy", "We use all natural fertalizers" ],
+    "ListHeader": null,
+    "ListFooter": null,
+    "MainImageUrl": "/about_us_tree_compressed_25.jpg",
+    "SubImageUrl": null,
+    "Item1Title": "Standard Residental Service Contract",
+    "Item2Title": "Our History",
+    "Item1Description": "One standard price for our monthly service",
+    "Item2Description": "What started out as cutting the neighbor's grass has turned into maintaining over 300 properties in South Florida."
+  },
+  "Email": "lawns@example.com",
+  "Phone": "555-555-1212",
+  "SiteTitle": "Louie's Law Service",
+  "HighlightTitle": "",
+  "HighlightSubTitle": "",
+  "HighlightItems": [],
+  "ProductItems": null,
+  "Blogs": [
+    {
+      "Title": "How to Keep My Lawn Green?",
+      "Descr": "3 Simple Steps to keep your lawn green all year long.",
+      "Url": "/",
+      "ButtonText": "Read More"
+    },
+    {
+      "Title": "How Much Fertalizer Should I Use?",
+      "Descr": "We get this question more than any other. Find out more in this article.",
+      "Url": "/",
+      "ButtonText": "Read More"
+    }
+  ],
+  "Keywords": "lawn|landscaping"
+}

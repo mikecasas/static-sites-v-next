@@ -1,0 +1,37 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": false,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": false,
+  "DisplayAbout": false,
+  "DisplayVideo": true,
+  "DisplayFaq": true,
+  "HeroItem": null,
+  "AboutUsItem": null,
+  "Email": "video@example.com",
+  "Phone": "",
+  "SiteTitle": "My Product",
+  "HighlightTitle": "",
+  "HighlightSubTitle": "",
+  "HighlightItems": [],
+  "ProductTitle": "",
+  "Products": [],
+  "Blogs": [],
+  "FAQs": [
+    {
+      "question": "How do you think is the best Major League Baseball Mascot?",
+      "answers": ["The Phillie Phanatic?","The San Diego Chicken?"]
+    }
+  ],
+  "Keywords": ""
+}

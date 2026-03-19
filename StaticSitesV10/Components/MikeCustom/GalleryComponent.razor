@@ -1,0 +1,180 @@
+﻿@if (Gallery != null)
+{
+    <div class="container-fluid bg-dark pt-5 my-5 px-0">
+        <div class="text-center mx-auto mt-5 wow fadeIn">
+            <p class="fw-medium text-uppercase text-primary mb-2"></p>
+            <h1 class="display-5 text-white mb-5">Our Menu</h1>
+        </div>
+        <div class="row">
+            @foreach (var i in Gallery)
+        {
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card">
+
+                    <div class="text-center">
+                            <img src="@i.FullImageUrl" class="card-img-top align-content-center medium style-picture" alt="Picture 1" />
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@i.Title</h5>
+                        <p class="card-text">@i.Descr</p>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+    </div>
+}
+
+@code {
+    //[Parameter]
+    //public string Title { get; set; }
+
+    [Parameter]
+    public IEnumerable<GalleryItem> Gallery { get; set; }
+}
+
+<!-- Project Start -->
+@*<div class="container-fluid bg-dark pt-5 my-5 px-0">
+    <div class="text-center mx-auto mt-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+        <p class="fw-medium text-uppercase text-primary mb-2"></p>
+        <h1 class="display-5 text-white mb-5">Our Menu</h1>
+    </div>
+
+   <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
+
+
+        <div class="card mb-5 pt-5 my-5 px-0" style="width: 30rem;">
+            <img src="tenants/00/img/products/image- (1)_compressed_25.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Item 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 30rem;">
+            <img src="tenants/00/img/products/image- (2)_compressed_25.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Item 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+            <img src="tenants/00/img/products/image- (4)_compressed_25.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Item 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+     </div>
+
+    <div class="row mb-5" data-wow-delay="0.1s">
+
+        <div class="card mb-5" style="width: 30rem;">
+            <img src="tenants/00/img/products/image- (5)_compressed_25.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Item 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 30rem;">
+            <img src="tenants/00/img/products/image- (6)_compressed_25.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Item 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+            <img src="tenants/00/img/products/image- (7)_compressed_25.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Item 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>*@
+
+
+@*<div class="container-fluid bg-dark pt-5 my-5 px-0">
+    <div class="text-center mx-auto mt-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+        <p class="fw-medium text-uppercase text-primary mb-2">Our Menu</p>
+        <h1 class="display-5 text-white mb-5">See What We Have Completed Recently</h1>
+    </div>
+    <div class="owl-carousel project-carousel wow fadeIn" data-wow-delay="0.1s">
+        <a class="project-item" href="">
+            <img class="img-fluid" src="tenants/simple/img/eeyor.jpg" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Auto Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="tenants/simple/img/project-1.jpg" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Civil Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="img/project-3.jpg" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Gas Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="img/project-4.jpg" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Power Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="img/project-5.jpg" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Energy Engineering</h5>
+            </div>
+        </a>
+        <a class="project-item" href="">
+            <img class="img-fluid" src="img/project-6.jpg" alt="">
+            <div class="project-title">
+                <h5 class="text-primary mb-0">Water Engineering</h5>
+            </div>
+        </a>
+    </div>
+</div>*@
+<!-- Project End -->
+<!-- ======= Gallery Section ======= -->
+@*<section id="gallery" class="gallery section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>gallery</h2>
+            <p>Check <span>Our Gallery</span></p>
+        </div>
+
+        <div class="gallery-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="tenants/default/img/truck.PNG"><img src="tenants/default/img/truck.PNG" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/gallery/gallery-2.jpg"><img src="img/gallery/gallery-2.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/gallery/gallery-3.jpg"><img src="img/gallery/gallery-3.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/gallery/gallery-4.jpg"><img src="img/gallery/gallery-4.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/gallery/gallery-5.jpg"><img src="img/gallery/gallery-5.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/gallery/gallery-6.jpg"><img src="img/gallery/gallery-6.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/gallery/gallery-7.jpg"><img src="img/gallery/gallery-7.jpg" class="img-fluid" alt=""></a></div>
+                <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="img/gallery/gallery-8.jpg"><img src="img/gallery/gallery-8.jpg" class="img-fluid" alt=""></a></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>*@
+<!-- End Gallery Section -->

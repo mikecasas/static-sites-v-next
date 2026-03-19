@@ -1,0 +1,73 @@
+{
+  "DisplayStaff": false,
+  "DisplayBlog": true,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": true,
+  "DisplayGallery": false,
+  "DisplayTopHeader": true,
+  "DisplayHeader": false,
+  "DisplayHero": true,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": true,
+  "DisplayAbout": true,
+  "HeroItem": {
+    "Title": "AJ Anderson Trucking",
+    "SubTitle": "Your Logistics Experts",
+    "ImageUrl": "/bg.jpg",
+    "ActionTitle": null
+  },
+  "AboutUsItem": {
+    "Title": "",
+    "SubTitle": "We've been hauling products for over 25 years.",
+    "ItemList": [],
+    "ListHeader": null,
+    "ListFooter": null,
+    "MainImageUrl": "/about_us.jpg",
+    "SubImageUrl": null,
+    "Item1Title": "Standard Residental Service Contract",
+    "Item2Title": "Our History",
+    "Item1Description": "!!!!!",
+    "Item2Description": "...."
+  },
+  "Email": "aj@example.com",
+  "Phone": "555-555-1212",
+  "SiteTitle": null,
+  "HighlightTitle": "Transportation Services",
+  "HighlightSubTitle": "We move and haul all your commodities",
+  "HighlightItems": [
+    {
+      "Title": "Title 1",
+      "Descr": "Icon Highlights go here",
+      "Icon": "coins",
+      "IconCss": "fas fa-coins fa-stack-1x fa-inverse"
+    },
+    {
+      "Title": "Title 1",
+      "Descr": "Icon Highlights go here",
+      "Icon": "tachometer-alt",
+      "IconCss": "fas fa-tachometer-alt fa-stack-1x fa-inverse"
+    },
+    {
+      "Title": "Title 1",
+      "Descr": "Icon Highlights go here",
+      "Icon": "cogs",
+      "IconCss": "fas fa-cogs fa-stack-1x fa-inverse"
+    }
+  ],
+  "Products": null,
+  "Blogs": [
+    {
+      "Title": "Blog 1",
+      "Descr": "sdfdsf   sddsfds sf sdf"
+    },
+    {
+      "Title": "Blog 2",
+      "Descr": "sdsfsdsdfdsfsdf"
+    }
+  ],
+  "Keywords": ""
+}

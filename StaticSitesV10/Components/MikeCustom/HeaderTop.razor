@@ -1,0 +1,113 @@
+﻿
+
+@*Mobile Top Header*@
+<nav class="navbar navbar-expand-lg bg-dark text-white fixed-top py-0 pe-5">
+
+	<div class="h-100 d-inline-flex align-items-center text-white py-2 px-5">
+		<span class="fs-5">
+			<i class="fa fa-envelope me-2"></i>
+		</span>
+		<span class="fs-7 me-2">@Email</span>
+	
+		<span class="fs-7 text-white"><a href="@EmailLink" style="color:white">Email Us</a></span>
+	</div>
+</nav>
+
+
+
+<div class="container-fluid bg-dark px-0 fixed-top">
+	<div class="row g-0 d-none d-lg-flex">
+		<div class="col-lg-6 ps-5 text-start">
+			<div class="h-100 d-inline-flex align-items-center text-white">
+
+				<div class="h-100 d-inline-flex align-items-center text-white py-2 px-5">
+					<span class="fs-5 fw-bold me-2">
+						<i class="fa fa-envelope me-2"></i>
+					</span>
+					<span class="fs-5 fw-bold">@Email</span>
+					&nbsp;&nbsp;&nbsp;
+
+					<span class="fs-5 fw-bold text-white"><a href="@EmailLink" style="color:white">Email Us</a></span>					
+				</div>
+
+				@*<span>Follow Us:</span>
+				<a class="btn btn-link text-light" href="#"><i class="fab fa-facebook-f"></i></a>
+				<a class="btn btn-link text-light" href="#"><i class="fab fa-twitter"></i></a>
+				<a class="btn btn-link text-light" href="#"><i class="fab fa-linkedin-in"></i></a>
+				<a class="btn btn-link text-light" href="#"><i class="fab fa-instagram"></i></a>*@
+			</div>
+		</div>
+
+
+		@if (string.IsNullOrEmpty(Phone)){
+			
+		}else
+		{
+			<div class="col-lg-6 text-end">
+				<div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+					<span class="fs-5 fw-bold me-2">
+						<i class="fa fa-phone-alt me-2"></i>Call Us:
+					</span>
+					<span class="fs-5 fw-bold">@Phone</span>
+				</div>
+			</div>
+		}
+		
+	</div>
+</div>
+
+@code {
+
+	private string EmailLink = "";
+
+	[Parameter]
+	public string Phone { get; set; }
+
+	[Parameter]
+	public string Email { get; set; }
+
+	protected override void OnInitialized()
+	{
+		EmailLink = "mailto:" + Email;
+	}
+
+
+}
+
+
+
+
+
+
+@*<!-- header top section -->
+<div class="top-nav-section hidden-xs">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<div class="social">
+					<a href="#"><i class="ti-facebook"></i></a>
+					<a href="#"><i class="ti-twitter-alt"></i></a>
+					<a href="#"><i class="ti-google"></i></a>
+					<a href="#"><i class="ti-instagram"></i></a>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-7 col-lg-6">
+				<div class="counter-top">
+					<h5>Upcoming Event:</h5>
+					<div class="counter">
+						<div class="counter-item"><h4>10</h4>Days</div>
+						<div class="counter-item"><h4>08</h4>hours</div>
+						<div class="counter-item"><h4>40</h4>Mins</div>
+						<div class="counter-item"><h4>56</h4>secs</div>
+					</div>
+					<a href="#" class="top-readmore hidden-sm">readmore</a>
+				</div>
+			</div>
+			<div class="col-sm-3 col-md-2 col-lg-3">
+				<div class="user-input">
+					<a href="#">My account <i class="fa fa-angle-down"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>*@

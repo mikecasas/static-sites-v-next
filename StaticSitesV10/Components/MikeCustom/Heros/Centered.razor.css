@@ -1,0 +1,45 @@
+﻿/*---------------------
+	Hero Section
+-----------------------*/
+/*.hero-section {
+    height: 800px;
+    position: relative;
+}
+
+    .hero-section:after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: #000;
+        opacity: 0.15;*/  /*Set's how light or dark you want the image*/
+    /*}
+
+    .hero-section .hero-content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: table;
+        text-align: center;
+        z-index: 2;
+    }
+
+        .hero-section .hero-content .hc-inner {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .hero-section .hero-content h2 {
+            font-size: 70px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .hero-section .hero-content p {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 40px;
+        }*/
