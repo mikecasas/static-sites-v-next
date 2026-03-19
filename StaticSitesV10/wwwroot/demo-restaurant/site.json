@@ -18,7 +18,7 @@
     "TenantName": "demo-restaurant",
     "Title": "Italiano Miami",
     "SubTitle": "World Class Italian food in Miami",
-    "ImageUrl": "/image-0_compressed_25.jpg",
+    "ImageUrl": "image-0_compressed_25.jpg",
     "ActionTitle": null,
     "LayoutModule": ""
   },
@@ -29,7 +29,7 @@
     "ItemList": null,
     "ListHeader": null,
     "ListFooter": null,
-    "MainImageUrl": "/about.jpg",
+    "MainImageUrl": "about.jpg",
     "SubImageUrl": null,
     "Item1Title": "Delicious Italian food for over 30 years",
     "Item2Title": "Our History",

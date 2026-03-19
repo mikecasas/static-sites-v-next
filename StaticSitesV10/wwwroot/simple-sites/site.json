@@ -44,14 +44,12 @@
     {
       "Title": "Affordable Price",
       "Descr": "$75 for our starter template. We can get your site online fast without breaking the bank.",
-      "Icon": "coins",
-      "IconCss": "fas fa-coins fa-stack-1x fa-inverse"
-    },   
+      "IconName": "coins"
+    },
     {
       "Title": "Services",
       "Descr": "We are a full fledged technology shop and can provide other services for your business including integrations and process automation. Email us for more information and pricing.",
-      "Icon": "cogs",
-      "IconCss": "fas fa-cogs fa-stack-1x fa-inverse"
+      "IconName": "gears"
     }
   ],
   "ProductTitle": "Template Examples",
@@ -103,5 +101,12 @@
     }
   ],
   "Blogs": [],
-  "Keywords": "small business web templates"
+  "Keywords": "small business web templates",
+  "PriceItem": {
+    "Title": "Simple Sites Pricing",
+    "Descr": "Our Starter template is sufficient to build an effective 'one page' website (similiar to the page you are on now) displaying the most important information for your customers. You provide us the content and images and we upload it to our servers.",
+    "PriceTitle": "Starter",
+    "ActualPrice": "$ 75",
+    "FeatureCallouts": [ "Includes Hosting for one year" ]
+  }
 }

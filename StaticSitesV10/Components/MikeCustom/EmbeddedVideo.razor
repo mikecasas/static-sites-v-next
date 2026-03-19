@@ -1,13 +1,16 @@
-﻿
-<div class="video-page">
-    <div class="video-container">
-        <iframe src="@VideoUrl"
-                title="YouTube video player"
-                frameborder="0"
-                allowfullscreen>
-        </iframe>
+﻿@if (!string.IsNullOrEmpty(VideoUrl))
+{
+    <div class="video-page">
+        <div class="video-container">
+            <iframe src="@VideoUrl"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
+        </div>
     </div>
-</div>
+}
+
 
 @code {
 

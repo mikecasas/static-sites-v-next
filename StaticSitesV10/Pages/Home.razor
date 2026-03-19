@@ -6,8 +6,6 @@
 
 @inject ComponentManagement CompMan
 
-@* @rendermode InteractiveServer *@
-
 @inject HttpClient Http
 @inject IJSRuntime _jsRuntime
 
@@ -102,7 +100,7 @@ else
 
     @if (SiteStructure.DisplayPrices)
     {
-        <StaticSitesV10.Components.MikeCustom.Prices Price="75" Email="@SiteStructure.Email" PriceItem="@SiteStructure.PriceItem"></StaticSitesV10.Components.MikeCustom.Prices>
+        <StaticSitesV10.Components.MikeCustom.Prices Email="@SiteStructure.Email" PriceItem="@SiteStructure.PriceItem"></StaticSitesV10.Components.MikeCustom.Prices>
     }
 
     @if (SiteStructure.DisplayReservation)
@@ -127,7 +125,7 @@ else
 
     @if (SiteStructure.DisplayGallery)
     {
-        <StaticSitesV10.Components.MikeCustom.GalleryComponent Gallery="@SiteStructure.Gallery"></StaticSitesV10.Components.MikeCustom.GalleryComponent>
+        <StaticSitesV10.Components.MikeCustom.GalleryComponent Gallery="@GalleryItemsVm"></StaticSitesV10.Components.MikeCustom.GalleryComponent>
     }
 
     @if (SiteStructure.DisplayFooter)
@@ -137,6 +135,8 @@ else
 }
 
 @code{
+
+    const string DefaultHero = "LargeHero";
     bool IsTheme1;
     string ThemeName = "theme-1";
     string PhyAddress = string.Empty;
@@ -145,6 +145,7 @@ else
     int VideoHeight = 400;
 
     AboutUsItemVm? AboutUsVm;
+    IEnumerable<GalleryItemVm>? GalleryItemsVm;
 
     string? SelectedHero;
 
@@ -189,7 +190,15 @@ else
         if (SiteStructure.DisplayHero)
         {
             var HeroVm = new HeroItemVm(Tenant, SiteStructure.HeroItem);
-            InitializeHeroControls(HeroVm, "LargeHero");
+
+            if (string.IsNullOrEmpty(SiteStructure.HeroItem.LayoutModule))
+            {
+                InitializeHeroControls(HeroVm, DefaultHero);
+            }
+            else
+            {
+                InitializeHeroControls(HeroVm, SiteStructure.HeroItem.LayoutModule);
+            }
         }      
     } 
 
@@ -219,11 +228,11 @@ else
         await module.InvokeVoidAsync("setTenantTheme", tenantId);
     }
 
-    protected async override Task OnParametersSetAsync()
-    {
-        await base.OnParametersSetAsync();
-        //await GetSiteStructure();
-    }
+    // protected async override Task OnParametersSetAsync()
+    // {
+    //     await base.OnParametersSetAsync();
+    //     //await GetSiteStructure();
+    // }
 
     private async Task GetSiteStructure()
     {
@@ -248,12 +257,28 @@ else
         var TempSiteStructure = await Http.GetFromJsonAsync<SiteStructure>(Url);
 
         SetProducts(TempSiteStructure, RelativeLocation);
-      
+
         SiteStructure = TempSiteStructure;               
 
         SiteStructure.EmbeddedVideoUrl = "https://www.youtube.com/embed/nhAnKAV38VI";
 
-        AboutUsVm = new AboutUsItemVm(Tenant, SiteStructure?.AboutUsItem); 
+        if (SiteStructure.DisplayAbout)
+        {
+            AboutUsVm = new AboutUsItemVm(Tenant, SiteStructure?.AboutUsItem);
+        }       
+
+        if (SiteStructure.DisplayGallery)
+        {
+            var L = new List<GalleryItemVm>();
+
+            foreach (var item in SiteStructure.Gallery)
+            {
+                L.Add(new GalleryItemVm(Tenant, item));
+            }
+
+            GalleryItemsVm = L;
+
+        }
     }    
 
     private void SetProducts(SiteStructure site,string relativeLocation)

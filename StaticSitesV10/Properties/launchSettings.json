@@ -13,7 +13,7 @@
     "https": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "home/simple-sites",
+      "launchUrl": "home/demo-restaurant",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

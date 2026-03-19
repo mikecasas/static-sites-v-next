@@ -18,7 +18,7 @@
     "TenantName": "demo-lawn",
     "Title": "Louie's Lawn",
     "SubTitle": "Landscaping & Lawn Servicing Experts",
-    "ImageUrl": "/bg_lawn_compressed_25.jpg",
+    "ImageUrl": "bg_lawn_compressed_25.jpg",
     "ActionTitle": null,
     "LayoutModule": ""
   },
@@ -29,7 +29,7 @@
     "ItemList": [ "Dependable", "Trustworthy", "We use all natural fertalizers" ],
     "ListHeader": null,
     "ListFooter": null,
-    "MainImageUrl": "/about_us_tree_compressed_25.jpg",
+    "MainImageUrl": "about_us_tree_compressed_25.jpg",
     "SubImageUrl": null,
     "Item1Title": "Standard Residental Service Contract",
     "Item2Title": "Our History",

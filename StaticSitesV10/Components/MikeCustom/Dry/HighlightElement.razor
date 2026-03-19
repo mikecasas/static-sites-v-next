@@ -1,0 +1,17 @@
+﻿@if(i is not null)
+{
+  
+        <span class="fa-stack fa-4x">
+            <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa-solid fa-@i.IconName fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4 class="my-3">@i.Title</h4>
+        <p class="lead">@i.Descr</p>
+    
+}
+
+@code {
+
+    [Parameter]
+    public HighlightItem? i { get; set; }
+}

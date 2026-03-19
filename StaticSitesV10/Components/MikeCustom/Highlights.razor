@@ -14,15 +14,11 @@
                 <div class="row text-center">
 
                     @foreach (var i in HighlightItems)
-                    {
+                    {         
                         <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="@i.IconCss"></i>
-                            </span>
-                            <h4 class="my-3">@i.Title</h4>
-                            <p class="lead">@i.Descr</p>
+                            <StaticSitesV10.Components.MikeCustom.Dry.HighlightElement i="@i"></StaticSitesV10.Components.MikeCustom.Dry.HighlightElement>
                         </div>
+
                     }
                 </div>
                
@@ -32,13 +28,8 @@
 
                      @foreach (var i in HighlightItems)
                     {
-                        <div class="col-md-4">
-                            <span class="fa-stack fa-4x">
-                                <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                                <i class="@i.IconCss"></i>
-                            </span>
-                            <h4 class="my-3">@i.Title</h4>
-                            <p class="lead">@i.Descr</p>
+                        <div class="col-md-6">
+                        <StaticSitesV10.Components.MikeCustom.Dry.HighlightElement i="@i"></StaticSitesV10.Components.MikeCustom.Dry.HighlightElement>
                         </div>
                     }
                  

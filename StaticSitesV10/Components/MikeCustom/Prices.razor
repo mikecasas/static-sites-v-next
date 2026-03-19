@@ -1,7 +1,4 @@
-﻿
-
-@if(PI is not null)
-{
+﻿@if (PriceItem is not null){
 
     <div class="container py-3">
         <header>
@@ -9,8 +6,8 @@
             </div>
 
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <h1 class="display-6 fw-normal">@PI.Title</h1>
-                <p class="fs-5 text-muted">@PI.Descr</p>
+                <h1 class="display-6 fw-normal">@PriceItem.Title</h1>
+                <p class="fs-5 text-muted">@PriceItem.Descr</p>
             </div>
         </header>
 
@@ -21,18 +18,18 @@
                 <div class="col-12">
                     <div class="card mb-4 rounded-3 shadow-sm border-primary">
                         <div class="card-header py-3 text-white bg-primary border-primary">
-                            <h4 class="my-0 fw-normal">@PI.PriceTitle</h4>
+                            <h4 class="my-0 fw-normal">@PriceItem.PriceTitle</h4>
                         </div>
                         <div class="card-body text-center">
-                            <h1 class="card-title pricing-card-title">@PI.ActualPrice<small class="text-muted fw-light"></small></h1>
+                            <h1 class="card-title pricing-card-title">@PriceItem.ActualPrice<small class="text-muted fw-light"></small></h1>
                             <ul class="list-unstyled mt-3 mb-4">
                                 @* <li>One Time Fee</li>*@
                                 @* <li></li>
                             <li>Email support</li>*@
 
-                                @if (PI.FeatureCallouts.Any())
+                                @if (PriceItem.FeatureCallouts.Any())
                                 {
-                                    foreach(var i in PI.FeatureCallouts)
+                                    foreach (var i in PriceItem.FeatureCallouts)
                                     {
                                         <li>@i</li>
                                     }
@@ -68,23 +65,15 @@
 @code {
 
     private string EmailLink = string.Empty;
-    private string LocalPrice = string.Empty;
-    private PriceItem? PI;
-
 
     [Parameter]
     public string? Email { get; set; }
-    [Parameter]
-    public string? Price { get; set; }
-
+  
     [Parameter]
     public PriceItem? PriceItem { get; set; }
 
-
     protected override void OnInitialized()
     {
-        EmailLink = "mailto:" + Email;
-        LocalPrice = "$ " + Price;
-        PI = PriceItem;
+        EmailLink = "mailto:" + Email;       
     }
 }

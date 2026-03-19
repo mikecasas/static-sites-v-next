@@ -7,11 +7,11 @@
 
         public string? IconName { get; set; }
 
-        public string IconCss { get=> IconCssFontAwesome(IconName); }
+        //public string IconCss { get=> IconCssFontAwesome(IconName); }
 
-        private string IconCssFontAwesome(string? iconName)
-        {
-            return $"fas fa-{iconName} fa-stack-1x fa-inverse";
-        }
+        //private string IconCssFontAwesome(string? iconName)
+        //{
+        //    return $"fa-solid fa-{iconName} fa-stack-1x fa-inverse";
+        //}
     }   
 }
