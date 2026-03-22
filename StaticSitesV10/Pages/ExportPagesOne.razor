@@ -1,0 +1,16 @@
+﻿@inject HtmlExportService HtmlSvc
+
+@page "/export-pages-one"
+
+<input @bind="Url" placeholder="https://localhost:7053/home/code-buoy/lobbyist-tracker" style="width:300px" />
+
+<button @onclick="Download">Download Minified HTML</button>
+
+@code {
+    private string Url;
+
+    private async Task Download()
+    {
+        await HtmlSvc.DownloadMinifiedHtmlAsync(Url);
+    }
+}

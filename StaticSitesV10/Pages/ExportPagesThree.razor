@@ -1,0 +1,35 @@
+﻿@inject FullOfflineExportService ExportService
+
+@page "/export-pages-three"
+
+<input @bind="Url" placeholder="https://localhost:7053/home/code-buoy/lobbyist-tracker" style="width:300px" />
+
+<button @onclick="Export">Download Full Offline Page</button>
+
+<p>@Status</p>
+
+@code {
+    private string Url;
+    private string Status;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Url = "https://localhost:7053/home/code-buoy/lobbyist-tracker";
+    }
+
+    private async Task Export()
+    {
+        Status = "Waiting for page to fully render...";
+
+        try
+        {
+            await ExportService.DownloadAsync(Url);
+            Status = "Done!";
+        }
+        catch
+        {
+            Status = "Failed (CORS or iframe blocked)";
+        }
+    }
+}

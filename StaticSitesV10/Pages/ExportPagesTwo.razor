@@ -1,0 +1,28 @@
+﻿@inject CleanExportService CleanExportService
+
+@page "/export-pages-two"
+
+<input @bind="Url" placeholder="https://localhost:7053/home/code-buoy/lobbyist-tracker" style="width:300px" />
+
+<button @onclick="Export">Clean Export URL</button>
+
+<p>@Status</p>
+
+@code {
+    private string Url;
+    private string Status;
+
+    private async Task Export()
+    {
+        Status = "Processing...";
+        try
+        {
+            await CleanExportService.DownloadCleanFromUrlAsync(Url);
+            Status = "Done!";
+        }
+        catch
+        {
+            Status = "Failed (likely CORS issue)";
+        }
+    }
+}

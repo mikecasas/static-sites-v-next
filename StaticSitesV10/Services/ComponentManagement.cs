@@ -2,7 +2,8 @@
 using StaticSitesV10.Entities;
 
 namespace StaticSitesV10.Services
-{    public class ComponentMetadata
+{   
+    public class ComponentMetadata
     {
         public required Type Type { get; init; }
         public required string Name { get; init; }

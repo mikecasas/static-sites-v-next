@@ -11,5 +11,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddScoped<ComponentManagement>();
 builder.Services.AddScoped<HtmlExportService>();
+builder.Services.AddScoped<CleanExportService>();
+builder.Services.AddScoped<FullOfflineExportService>();
 
 await builder.Build().RunAsync();
