@@ -12,6 +12,8 @@
             this.ImageUrl = hero.ImageUrl;
             this.ActionTitle = hero.ActionTitle;
             this.ActionUrl = hero.ActionUrl;
+            this.SecondActionTitle = hero.SecondActionTitle;
+            this.SecondActionUrl = hero.SecondActionUrl;
         }
 
         public string FullImageUrl { get => _Tenant + "/img/" + base.ImageUrl; }

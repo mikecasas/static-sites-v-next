@@ -22,6 +22,8 @@
     "ImageUrl": "/products/lobbyist-info_compressed_15.jpg",
     "ActionTitle": "Email Us",
     "ActionUrl": "mailto:info@codebuoy.dev",
+    "SecondActionTitle": "Try Our Demo",
+    "SecondActionUrl": "https://demo.lobbyist-tracker.app",
     "LayoutModule": "RightAligned"
   },
   "AboutUsItem": {
