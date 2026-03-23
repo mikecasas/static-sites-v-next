@@ -1,23 +1,35 @@
-﻿<div class="container pt-125">
-
-
-<h3>F.A.Q.</h3>
-
-@if (FAQs == null)
+﻿@if (Faqs is not null)
 {
-    
-} else
-{
-    @foreach (var i in FAQs)
+
+    @foreach (var i in Faqs)
     {
-        <PublicSitesClient.Components.FaqItem FAQ="@i"></PublicSitesClient.Components.FaqItem>        
-    }
-}
-</div>
+        <div class="container-fluid">
+            <h3>@i.Question</h3>
 
+            @foreach (var a in i.Answers)
+            {
+                <p class="lead">@a</p>
+            }
+        </div>
+    }
+
+
+@* 
+    <div class="container-fluid">
+
+        <h3>@Faqs.Question</h3>
+
+        @foreach (var i in Faqs.Answers)
+        {
+            <p class="lead">@i</p>
+        }
+
+    </div> *@
+}
 
 @code {
-
+    
     [Parameter]
-    public IEnumerable<FrequentlyAskedQuestions> FAQs { get; set; }
+    public IEnumerable<FrequentlyAskedQuestions>? Faqs { get; set; }
+
 }

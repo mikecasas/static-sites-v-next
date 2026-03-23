@@ -17,10 +17,10 @@
   "HeroItem": {
     "Title": "Budget Preparation",
     "SubTitle": "We can assist with all aspects of your organizations Budget Process. From Budget item entry and review to salary projection to creating your budget book, we've got you covered.",
-    "ImageUrl": "/friday-consulting.jpg",
+    "ImageUrl": "friday-consulting.jpg",
     "ActionTitle": "Email Us",
     "ActionUrl": "mailto:info@codebuoy.dev",
-    "LayoutModule": ""
+    "LayoutModule": "RightAligned"
   },
   "AboutUsItem": {
     "Title": "",
@@ -28,7 +28,7 @@
     "ItemList": [ "Business & Personal Websites", "Invoicing & Payments", "Scheduling & Appointment applications", "API Integration", "Data Conversion", "Custom Software Development", "All U.S. Based" ],
     "ListHeader": null,
     "ListFooter": null,
-    "MainImageUrl": "/about_us_compressed_25.jpg",
+    "MainImageUrl": "about_us_compressed_25.jpg",
     "SubImageUrl": null,
 
     "Item1Title": "Our History",

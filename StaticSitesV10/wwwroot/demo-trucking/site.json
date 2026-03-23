@@ -17,7 +17,7 @@
   "HeroItem": {
     "Title": "AJ Anderson Trucking",
     "SubTitle": "Your Logistics Experts",
-    "ImageUrl": "/bg.jpg",
+    "ImageUrl": "bg.jpg",
     "ActionTitle": null
   },
   "AboutUsItem": {
@@ -26,7 +26,7 @@
     "ItemList": [],
     "ListHeader": null,
     "ListFooter": null,
-    "MainImageUrl": "/about_us.jpg",
+    "MainImageUrl": "about_us.jpg",
     "SubImageUrl": null,
     "Item1Title": "Standard Residental Service Contract",
     "Item2Title": "Our History",
@@ -42,20 +42,17 @@
     {
       "Title": "Title 1",
       "Descr": "Icon Highlights go here",
-      "Icon": "coins",
-      "IconCss": "fas fa-coins fa-stack-1x fa-inverse"
+      "IconName": "coins"    
     },
     {
       "Title": "Title 1",
       "Descr": "Icon Highlights go here",
-      "Icon": "tachometer-alt",
-      "IconCss": "fas fa-tachometer-alt fa-stack-1x fa-inverse"
+      "IconName": "tachometer-alt"
     },
     {
       "Title": "Title 1",
       "Descr": "Icon Highlights go here",
-      "Icon": "cogs",
-      "IconCss": "fas fa-cogs fa-stack-1x fa-inverse"
+      "IconName": "cogs"
     }
   ],
   "Products": null,

@@ -1,0 +1,47 @@
+{
+  "DisplayStaff": true,
+  "DisplayBlog": false,
+  "DisplayContact": false,
+  "DisplayEvents": false,
+  "DisplayFooter": false,
+  "DisplayGallery": false,
+  "DisplayTopHeader": false,
+  "DisplayHeader": false,
+  "DisplayHero": false,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
+  "DisplayTestamonial": false,
+  "DisplayHighlights": false,
+  "DisplayAbout": false,
+  "DisplayVideo": false,
+  "DisplayFaq": false,
+  "HeroItem": null,
+  "AboutUsItem": null,
+  "Email": "",
+  "Phone": "",
+  "SiteTitle": "ML",
+  "HighlightTitle": "",
+  "HighlightSubTitle": "",
+  "HighlightItems": [],
+  "ProductTitle": "",
+  "Products": [],
+  "StaffTitle": "Executive Team",
+  "StaffSubTitle": "Our Leadership",
+  "Staff": [
+    {
+      "FullName": "John Doe",
+      "Title": "Mascot",
+      "Descr": "John has been the Phillie Phanatic for 10 years and is known for his energetic performances and love for the fans.",
+      "ImageUrl": "staff/john-doe.jpg"
+    },
+    {
+      "FullName": "John Doe",
+      "Title": "Mascot",
+      "Descr": "John has been the Phillie Phanatic for 10 years and is known for his energetic performances and love for the fans.",
+      "ImageUrl": "staff/john-doe.jpg"
+    }
+  ],
+  "FAQs": [],
+  "Keywords": ""
+}

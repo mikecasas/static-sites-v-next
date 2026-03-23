@@ -115,7 +115,7 @@ else
 
     @if (SiteStructure.DisplayStaff)
     {
-        <StaticSitesV10.Components.MikeCustom.Staff StaffBlock="@SiteStructure.StaffBlock" ></StaticSitesV10.Components.MikeCustom.Staff>
+        <StaticSitesV10.Components.MikeCustom.Staff StaffBlock="@StaffBlock" ></StaticSitesV10.Components.MikeCustom.Staff>
     }
 
     @if (SiteStructure.DisplayEvents)
@@ -146,6 +146,7 @@ else
 
     AboutUsItemVm? AboutUsVm;
     IEnumerable<GalleryItemVm>? GalleryItemsVm;
+    StaffBlock? StaffBlock;
 
     string? SelectedHero;
 
@@ -279,6 +280,26 @@ else
             GalleryItemsVm = L;
 
         }
+
+        if (SiteStructure.DisplayStaff)
+        {
+            var L = new List<StaffItemVm>();
+
+            foreach (var item in SiteStructure.Staff)
+            {
+                L.Add(new StaffItemVm(Tenant, item));
+            }
+
+            var Stb = new StaffBlock();
+            Stb.StaffPeople = L;
+            Stb.Title = SiteStructure.StaffTitle;
+            Stb.SubTitle = SiteStructure.StaffSubTitle;
+
+            StaffBlock = Stb;         
+
+        }
+
+
     }    
 
     private void SetProducts(SiteStructure site,string relativeLocation)

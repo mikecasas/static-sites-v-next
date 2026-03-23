@@ -27,7 +27,7 @@ namespace StaticSitesV10.Entities
         public HeroItem? HeroItem { get; set; }
         public AboutUsItem? AboutUsItem { get; set; }
 
-        public StaffBlock? StaffBlock { get; set; }
+        public IEnumerable<StaffItem>? Staff { get; set; }
 
         public string? Email { get; set; }
         public string? Phone { get; set; }
@@ -36,6 +36,9 @@ namespace StaticSitesV10.Entities
         
         public string? HighlightTitle { get; set; }
         public string? HighlightSubTitle { get; set; }
+
+        public string? StaffTitle { get; set; }
+        public string? StaffSubTitle { get; set; }
 
         public IEnumerable<HighlightItem>? HighlightItems { get; set; }
 

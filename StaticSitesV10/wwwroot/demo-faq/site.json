@@ -5,7 +5,7 @@
   "DisplayEvents": false,
   "DisplayFooter": true,
   "DisplayGallery": false,
-  "DisplayTopHeader": true,
+  "DisplayTopHeader": false,
   "DisplayHeader": false,
   "DisplayHero": false,
   "DisplayPrices": false,
@@ -14,13 +14,13 @@
   "DisplayTestamonial": false,
   "DisplayHighlights": false,
   "DisplayAbout": false,
-  "DisplayVideo": true,
+  "DisplayVideo": false,
   "DisplayFaq": true,
   "HeroItem": null,
   "AboutUsItem": null,
-  "Email": "video@example.com",
+  "Email": null,
   "Phone": "",
-  "SiteTitle": "My Product",
+  "SiteTitle": "Frequently Asked Questions",
   "HighlightTitle": "",
   "HighlightSubTitle": "",
   "HighlightItems": [],
@@ -31,6 +31,14 @@
     {
       "question": "How do you think is the best Major League Baseball Mascot?",
       "answers": ["The Phillie Phanatic?","The San Diego Chicken?"]
+    },
+    {
+      "question": "What is the best way to eat a Reese's Peanut Butter Cup?",
+      "answers": ["Bite the chocolate first?","Bite the peanut butter first?","Eat it all at once?"]
+    },
+    {
+      "question": "What is the best way to lose 20 pounds?",
+      "answers": ["Bite the chocolate first?","Bite the peanut butter first?","Eat it all at once?"]
     }
   ],
   "Keywords": ""

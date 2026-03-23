@@ -13,12 +13,12 @@
   "DisplayReservation": false,
   "DisplayTestamonial": false,
   "DisplayHighlights": true,
-  "DisplayAbout": true,
+  "DisplayAbout": false,
   "HeroItem": {
     "TenantName": "demo-shop",
     "Title": "Small Retail Site",
     "SubTitle": "Small online selling portal",
-    "ImageUrl": "/ecom-1_compressed_25.jpg?v=12",
+    "ImageUrl": "ecom-1_compressed_25.jpg?v=12",
     "ActionTitle": null,
     "LayoutModule": ""
   },
@@ -35,7 +35,7 @@
       "Title": "Headphones",
       "Descr": "Noise Cancelling",
       "Price": "$24.99",
-      "ImageUrl": "/products/headphone.jpg",
+      "ImageUrl": "products/headphone.jpg",
       "ActionButtonText": "More Information",
       "ActionButtonUrl": "",
       "UseModal":  true
@@ -44,7 +44,7 @@
       "Title": "Heels",
       "Descr": "Imported from Italy",
       "Price": "$99.00",
-      "ImageUrl": "/products/heels.jpg",
+      "ImageUrl": "products/heels.jpg",
       "ActionButtonText": "More Information",
       "ActionButtonUrl": "",
       "UseModal": true
@@ -53,7 +53,7 @@
       "Title": "Shoelaces",
       "Descr": "Non Synthetic Plastic",
       "Price": "$1.25",
-      "ImageUrl": "/products/shoelace.jpg",
+      "ImageUrl": "products/shoelace.jpg",
       "ActionButtonText": "More Information",
       "ActionButtonUrl": "",
       "UseModal": true
@@ -62,7 +62,7 @@
       "Title": "Watch",
       "Descr": "Great Present for Dad",
       "Price": "$10.00",
-      "ImageUrl": "/products/watch.jpg",
+      "ImageUrl": "products/watch.jpg",
       "ActionButtonText": "More Information",
       "ActionButtonUrl": "",
       "UseModal": true

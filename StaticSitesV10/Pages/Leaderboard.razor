@@ -198,9 +198,9 @@
 @code {
 
 	[Parameter]
-	public string TenantId { get; set; }
+	public string? TenantId { get; set; }
 
-	string CustomTitle = "";
+	string CustomTitle = string.Empty;
 
 	protected override void OnInitialized()
 	{
