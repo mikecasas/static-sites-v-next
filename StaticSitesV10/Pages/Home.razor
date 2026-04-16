@@ -18,16 +18,16 @@
 else
 {
     <PageTitle>@SiteStructure.SiteTitle</PageTitle>
-    <StaticSitesV10.Components.MikeCustom.SeoHeader Title=@SiteStructure.SiteTitle Overview="MyHomePage" Keywords="@PageKeywords"></StaticSitesV10.Components.MikeCustom.SeoHeader>
+    <RclStaticSites.Components.SeoHeader Title=@SiteStructure.SiteTitle Overview="MyHomePage" Keywords="@PageKeywords"></RclStaticSites.Components.SeoHeader>
 
     @if (SiteStructure.DisplayTopHeader)
     {
-        <StaticSitesV10.Components.MikeCustom.HeaderTop Phone="@SiteStructure.Phone" Email="@SiteStructure.Email"></StaticSitesV10.Components.MikeCustom.HeaderTop>
+        <RclStaticSites.Components.HeaderTop Phone="@SiteStructure.Phone" Email="@SiteStructure.Email"></RclStaticSites.Components.HeaderTop>
     }
 
     @if (SiteStructure.DisplayHeader)
     {
-        <StaticSitesV10.Components.MikeCustom.Header2 Title="Header"></StaticSitesV10.Components.MikeCustom.Header2>
+        <RclStaticSites.Components.Header2 Title="Header"></RclStaticSites.Components.Header2>
     }    
 
     @if (SiteStructure.DisplayHero)
@@ -70,67 +70,67 @@ else
 
     @if (SiteStructure.DisplayVideo)
     {
-        <StaticSitesV10.Components.MikeCustom.EmbeddedVideo VideoUrl="@SiteStructure.EmbeddedVideoUrl"></StaticSitesV10.Components.MikeCustom.EmbeddedVideo>
+        <RclStaticSites.Components.EmbeddedVideo VideoUrl="@SiteStructure.EmbeddedVideoUrl"></RclStaticSites.Components.EmbeddedVideo>
     }
 
     @if (SiteStructure.DisplayFaq)
     {
-        <StaticSitesV10.Components.MikeCustom.Faq FAQs="@SiteStructure.FAQs"></StaticSitesV10.Components.MikeCustom.Faq>
+        <RclStaticSites.Components.Faq FAQs="@SiteStructure.FAQs"></RclStaticSites.Components.Faq>
     }
 
     @if (SiteStructure.DisplayHighlights)
     {
-        <StaticSitesV10.Components.MikeCustom.Highlights Title="@SiteStructure.HighlightTitle" SubTitle="@SiteStructure.HighlightSubTitle" HighlightItems="@SiteStructure.HighlightItems"></StaticSitesV10.Components.MikeCustom.Highlights>
+        <RclStaticSites.Components.Highlights Title="@SiteStructure.HighlightTitle" SubTitle="@SiteStructure.HighlightSubTitle" HighlightItems="@SiteStructure.HighlightItems"></RclStaticSites.Components.Highlights>
     }
 
     @if (SiteStructure.DisplayAbout)
     {
-        <StaticSitesV10.Components.MikeCustom.About AboutUsItem="@AboutUsVm"></StaticSitesV10.Components.MikeCustom.About>
+        <RclStaticSites.Components.About AboutUsItem="@AboutUsVm"></RclStaticSites.Components.About>
     }
 
     @if (SiteStructure.DisplayBlog)
     {
-        <StaticSitesV10.Components.MikeCustom.Blogz.BlogMulti BlogItems="@SiteStructure.Blogs"></StaticSitesV10.Components.MikeCustom.Blogz.BlogMulti>
+        <RclStaticSites.Components.Blogz.BlogMulti BlogItems="@SiteStructure.Blogs"></RclStaticSites.Components.Blogz.BlogMulti>
     }
 
     @if (SiteStructure.DisplayProduct)
     {
-        <StaticSitesV10.Components.MikeCustom.ProductLarge Title="@SiteStructure.ProductTitle" ProductGroup="@TheProductGroup"></StaticSitesV10.Components.MikeCustom.ProductLarge>
+        <RclStaticSites.Components.ProductLarge Title="@SiteStructure.ProductTitle" ProductGroup="@TheProductGroup"></RclStaticSites.Components.ProductLarge>
     }
 
     @if (SiteStructure.DisplayPrices)
     {
-        <StaticSitesV10.Components.MikeCustom.Prices Email="@SiteStructure.Email" PriceItem="@SiteStructure.PriceItem"></StaticSitesV10.Components.MikeCustom.Prices>
+        <RclStaticSites.Components.Prices Email="@SiteStructure.Email" PriceItem="@SiteStructure.PriceItem"></RclStaticSites.Components.Prices>
     }
 
     @if (SiteStructure.DisplayReservation)
     {
-        <StaticSitesV10.Components.MikeCustom.Reservation></StaticSitesV10.Components.MikeCustom.Reservation>
+        <RclStaticSites.Components.Reservation></RclStaticSites.Components.Reservation>
     }
 
     @if (SiteStructure.DisplayTestamonial)
     {
-        <StaticSitesV10.Components.MikeCustom.Testamonials></StaticSitesV10.Components.MikeCustom.Testamonials>
+        <RclStaticSites.Components.Testamonials></RclStaticSites.Components.Testamonials>
     }
 
     @if (SiteStructure.DisplayStaff)
     {
-        <StaticSitesV10.Components.MikeCustom.Staff StaffBlock="@StaffBlock" ></StaticSitesV10.Components.MikeCustom.Staff>
+        <RclStaticSites.Components.Staff StaffBlock="@StaffBlock" ></RclStaticSites.Components.Staff>
     }
 
     @if (SiteStructure.DisplayEvents)
     {
-        <StaticSitesV10.Components.MikeCustom.Events></StaticSitesV10.Components.MikeCustom.Events>
+        <RclStaticSites.Components.Events></RclStaticSites.Components.Events>
     }
 
     @if (SiteStructure.DisplayGallery)
     {
-        <StaticSitesV10.Components.MikeCustom.GalleryComponent Gallery="@GalleryItemsVm"></StaticSitesV10.Components.MikeCustom.GalleryComponent>
+        <RclStaticSites.Components.GalleryComponent Gallery="@GalleryItemsVm"></RclStaticSites.Components.GalleryComponent>
     }
 
     @if (SiteStructure.DisplayFooter)
     {
-        <StaticSitesV10.Components.MikeCustom.Footer Phone="@SiteStructure.Phone" Email="@SiteStructure.Email" PhysicalAddress="@PhyAddress"></StaticSitesV10.Components.MikeCustom.Footer>
+        <RclStaticSites.Components.Footer Phone="@SiteStructure.Phone" Email="@SiteStructure.Email" PhysicalAddress="@PhyAddress"></RclStaticSites.Components.Footer>
     }    
 }
 
