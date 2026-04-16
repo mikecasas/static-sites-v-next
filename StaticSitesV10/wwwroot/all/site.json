@@ -1,54 +1,54 @@
 {
-  "DisplayStaff": true,
-  "DisplayBlog": true,
+  "DisplayStaff": false,
+  "DisplayBlog": false,
   "DisplayContact": true,
   "DisplayEvents": false,
   "DisplayFooter": true,
-  "DisplayGallery": true,
+  "DisplayGallery": false,
   "DisplayTopHeader": true,
-  "DisplayHeader": true,
+  "DisplayHeader": false,
   "DisplayHero": true,
-  "DisplayPrices": true,
-  "DisplayProduct": true,
-  "DisplayReservation": true,
+  "DisplayPrices": false,
+  "DisplayProduct": false,
+  "DisplayReservation": false,
   "DisplayTestamonial": false,
-  "DisplayHighlights": true,
-  "DisplayAbout": true,
+  "DisplayHighlights": false,
+  "DisplayAbout": false,
   "DisplayVideo": false,
   "DisplayFaq": false,
-    "HeroItem": {
-        "layoutModule": "",
-        "tenantName": "all",
-        "title": "The Palm Guy",
-        "subTitle": "South Florida Palms",
-        "imageUrl": "/palm-tree.jpg",
-        "actionTitle": "Click Me",
-        "actionUrl": "/foo"
-    },
-    "StaffBlock": {
-        "title": "Staff",
-        "subtitle": "sfsfd",
-        "staffPeople": [
-            {
-                "fullName": "Mike",
-                "title": "Programmer",
-                "descr": "20 years of exp",
-                "imageUrl": "mike.jpg"
-            },
-            {
-                "fullName": "Bob",
-                "title": "Programmer",
-                "descr": "20 years of exp",
-                "imageUrl": "mike.jpg"
-            },
-            {
-                "fullName": "John",
-                "title": "Programmer",
-                "descr": "20 years of exp",
-                "imageUrl": "mike.jpg"
-            }
-        ]
-    },
+  "HeroItem": {
+    "layoutModule": "",
+    "tenantName": "all",
+    "title": "The Palm Guy",
+    "subTitle": "South Florida Palms",
+    "imageUrl": "/palm-tree.jpg",
+    "actionTitle": "Click Me",
+    "actionUrl": "/foo"
+  },
+  "StaffBlock": {
+    "title": "Staff",
+    "subtitle": "sfsfd",
+    "staffPeople": [
+      {
+        "fullName": "Mike",
+        "title": "Programmer",
+        "descr": "20 years of exp",
+        "imageUrl": "mike.jpg"
+      },
+      {
+        "fullName": "Bob",
+        "title": "Programmer",
+        "descr": "20 years of exp",
+        "imageUrl": "mike.jpg"
+      },
+      {
+        "fullName": "John",
+        "title": "Programmer",
+        "descr": "20 years of exp",
+        "imageUrl": "mike.jpg"
+      }
+    ]
+  },
   "AboutUsItem": null,
   "Email": "video@example.com",
   "Phone": "",
@@ -69,9 +69,9 @@
     {
       "releasedOn": "2023-10-08",
       "title": "Host Blazor WASM Dirt Cheap",
-        "descr": "With so many differnt ways of hosting Blazor WASM apps, I looked at how I can host my static site for the cheapest price each month.",
-        "url": "/foor/ooo",
-        "buttonText": "Click More Info"
+      "descr": "With so many differnt ways of hosting Blazor WASM apps, I looked at how I can host my static site for the cheapest price each month.",
+      "url": "/foor/ooo",
+      "buttonText": "Click More Info"
     },
     {
       "releasedOn": "2023-02-13",

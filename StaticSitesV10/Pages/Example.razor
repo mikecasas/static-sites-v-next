@@ -1,0 +1,63 @@
+﻿@layout EmptyLayout
+
+@page "/example"
+
+@inject ComponentManagement CompMan
+
+@inject HttpClient Http
+@inject IJSRuntime _jsRuntime
+
+@if(SelectedComponent is not null){
+    <div>
+        <DynamicComponent Type="SelectedComponent.Type" Parameters="SelectedComponent.Parameters" />
+    </div>
+}
+
+
+@code{
+
+    const string DefaultHero = "LargeHero";
+
+    IJSObjectReference? module;
+
+    private ComponentMetadata? SelectedComponent;
+
+    Dictionary<string, ComponentMetadata>? PublicComponents;
+
+    protected override void OnInitialized()
+    {
+        //module = await _jsRuntime.InvokeAsync<IJSObjectReference>("import", "./js/dynamicThemes.js?v=x");
+
+        var Hero = new HeroItem();
+        Hero.LayoutModule = "Right Aligned";
+        Hero.ActionTitle = "test";
+        Hero.ActionTitle = "Click Here";
+        Hero.ImageUrl = "/bg_lawn_compressed_25.jpg";
+        Hero.SecondActionTitle = "Try this";
+        Hero.Title = "One";
+        Hero.SubTitle = "two...";
+
+        var HeroVm = new HeroItemVm("demo-lawn", Hero);
+
+        InitializeHeroControls(HeroVm, DefaultHero);      
+    } 
+
+    private void InitializeHeroControls(HeroItemVm hero, string controlName)
+    {
+        InitComponents(hero);      
+        SelectedComponent = PublicComponents[controlName];
+    }
+
+    private void SetHeroComponent(string controlName){
+
+        SelectedComponent = PublicComponents[controlName];
+    }
+
+    void InitComponents(HeroItemVm hero)
+    {        
+        //Taken From
+        //https://learn.microsoft.com/en-us/aspnet/core/blazor/components/dynamiccomponent?view=aspnetcore-9.0
+
+        PublicComponents = CompMan.GetHeroComponents(hero);
+    }         
+}
