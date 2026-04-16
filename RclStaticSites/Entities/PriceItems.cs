@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace StaticSitesV10.Entities
+namespace RclStaticSites.Entities
 {
     public class PriceItem
     {

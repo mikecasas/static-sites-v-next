@@ -1,6 +1,6 @@
-﻿using StaticSitesV10.Entities;
+﻿using RclStaticSites.Entities;
 
-namespace StaticSitesV10.Entities
+namespace RclStaticSites.Entities
 {
     public class ContactItem
     {

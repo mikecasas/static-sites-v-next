@@ -1,5 +1,5 @@
-﻿using StaticSitesV10.Components.MikeCustom.Heros;
-using StaticSitesV10.Entities;
+﻿using RclStaticSites.Entities;
+using StaticSitesV10.Components.MikeCustom.Heros;
 
 namespace StaticSitesV10.Services
 {   

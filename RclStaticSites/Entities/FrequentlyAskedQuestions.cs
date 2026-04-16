@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StaticSitesV10.Entities
+namespace RclStaticSites.Entities
 {
     public  class FrequentlyAskedQuestions
     {

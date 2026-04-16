@@ -1,5 +1,5 @@
 ﻿
-namespace StaticSitesV10.Entities
+namespace RclStaticSites.Entities
 {
     public class AboutUsItemVm : AboutUsItem
     {

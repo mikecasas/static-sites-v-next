@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace StaticSitesV10.Entities
+namespace RclStaticSites.Entities
 {
     public class StaffItem
     {
