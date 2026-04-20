@@ -2,33 +2,75 @@
 
 @page "/export-pages-three"
 
-<p>@TestSite</p>
+@* <p>@TestSite</p>
 
-<input @bind="Url" placeholder="@TestSite" style="width:300px" />
+<input @bind="Url" placeholder="@TestSite" style="width:300px" /> *@
 
-<button @onclick="Export">Download Full Offline Page</button>
+<button @onclick="ExportSitesAsync">Download Full Offline Page</button>
 
 <p>@Status</p>
 
-@code {
-    private string? Url;
-    private string? Status;
 
-    string TestSite = "https://localhost:7053/home/code-buoy/lobbyist-tracker";
+@if(Sites is not null){
+
+    <ul>
+
+    @foreach (var i in Sites)
+    {
+        <li>@i</li>
+    }
+    </ul>
+
+}
+
+@code {
+
+    private string? Status;
+    private IEnumerable<string>? Sites;  
 
     protected override void OnInitialized()
     {
-        base.OnInitialized();
-        Url = TestSite;
+        Sites = GetSites();
     }
 
-    private async Task Export()
+    private IEnumerable<string> GetSites(){
+
+        const string P1 = "https://localhost:7053/";
+
+        var L = new List<string>();
+        // L.Add($"{P1}home/code-buoy/lobbyist-tracker");
+        // L.Add($"{P1}home/code-buoy");
+        // L.Add($"{P1}home/demo-lawn");
+        // L.Add($"{P1}home/demo-pool");
+        // L.Add($"{P1}home/moose");
+        // L.Add($"{P1}home/demo-restaurant");
+        // L.Add($"{P1}home/demo-trucking");
+        // L.Add($"{P1}home/demo-video");
+        L.Add($"{P1}home/demo-shop");
+        // L.Add($"{P1}home/simple-sites");
+        // L.Add($"{P1}home/leaderboard");
+        // L.Add($"{P1}home/all");
+
+        return L.AsEnumerable();
+    }
+
+    private async Task ExportSitesAsync(){
+
+        foreach(var site in Sites){
+            await Export(site);
+        }
+    }
+
+    private async Task Export(string url)
     {
-        Status = "Waiting for page to fully render...";
+        Status = $"Waiting for page to fully render...{url}";
+
+        var Components = url.Split("/");
+        string Pg = Components.Last();
 
         try
         {
-            await ExportService.DownloadAsync(Url);
+            await ExportService.DownloadAsync(url, Pg);
             Status = "Done!";
         }
         catch

@@ -32,17 +32,20 @@ else
 
     @if (SiteStructure.DisplayHero)
     {
-        <div class="col-3 mt-5 mb-5">
+        @if (!IsProd)
+        {
+            <div class="col-3 mt-5 mb-5">
 
-            <select class="form-control" @bind="SelectedHero" @bind:after="ChangeHero">
+                <select class="form-control" @bind="SelectedHero" @bind:after="ChangeHero">
 
-                <option value="">Select a value</option>
-                @foreach (var c in PublicComponents)
-                {
-                    <option value="@c.Key">@c.Value.Name</option>
-                }
-            </select>
-        </div>
+                    <option value="">Select a value</option>
+                    @foreach (var c in PublicComponents)
+                    {
+                        <option value="@c.Key">@c.Value.Name</option>
+                    }
+                </select>
+            </div>
+        }       
 
         //Check to see if there a layout!!!
         @if(string.IsNullOrEmpty(SiteStructure.HeroItem?.LayoutModule)){
@@ -135,6 +138,8 @@ else
 }
 
 @code{
+
+    bool IsProd=true;
 
     const string DefaultHero = "LargeHero";
     bool IsTheme1;

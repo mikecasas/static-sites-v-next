@@ -1,4 +1,5 @@
 ﻿using Microsoft.JSInterop;
+using System.Net.Mime;
 using System.Text.RegularExpressions;
 
 namespace StaticSitesV10.Services
@@ -13,15 +14,19 @@ namespace StaticSitesV10.Services
             _js = js;
         }
 
-        public async Task DownloadAsync(string url)
+        public async Task DownloadAsync(string url, string fileName)
         {
+            //byte[] MyFile = Enumerable.Range(0, 100).Cast<byte>().ToArray();
+            //string FileName = "file.bin";
+            //string ContentType = "application/octet-stream";
+
             var html = await _js.InvokeAsync<string>("fullOfflineExport", url);
 
             var minified = Minify(html);
 
             await _js.InvokeVoidAsync(
                 "downloadFile",
-                GenerateFileName(url),
+                GenerateFileName(fileName),
                 minified
             );
         }
@@ -34,12 +39,15 @@ namespace StaticSitesV10.Services
             return html.Trim();
         }
 
-        private string GenerateFileName(string url)
+        private string GenerateFileName(string fileName)
         {
             try
             {
-                var uri = new Uri(url);
-                return $"{uri.Host.Replace(".", "_")}_offline.html";
+                //var uri = new Uri(url);
+                //return $"{uri.Host.Replace(".", "_")}_offline.html";
+
+                return $"{fileName}.html";
+
             }
             catch
             {
