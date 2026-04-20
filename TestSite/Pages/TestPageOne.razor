@@ -1,0 +1,36 @@
+﻿@layout EmptyLayout
+
+
+@page "/test-page-one"
+
+<h3>TestPageOne</h3>
+
+
+
+@if(HeroItem is not null)
+{
+   @*  <RclStaticSites.Components.Heros.LargeHero HeroItem="@HeroItem"></RclStaticSites.Components.Heros.LargeHero> *@
+
+    <RclStaticSites.Components.Heros.ChatGptHero HeroItem="@HeroItem"></RclStaticSites.Components.Heros.ChatGptHero>
+}
+
+
+
+
+@code {
+
+    RclStaticSites.Entities.HeroItemVm? HeroItem;
+
+    protected override void OnInitialized()
+    {
+        var heroItem = new RclStaticSites.Entities.HeroItem
+        {   SubTitle="sdsf",
+            Title = "Test Hero Title",
+            ImageUrl = "bg_lawn_compressed_25.jpg"
+        };
+
+        HeroItem = new RclStaticSites.Entities.HeroItemVm("demo-lawn", heroItem);
+
+        base.OnInitialized();
+    }
+}

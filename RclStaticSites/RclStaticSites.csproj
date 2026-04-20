@@ -8,7 +8,7 @@
 		<RootNamespace>RclStaticSites</RootNamespace>
 		<AssemblyName>RclStaticSites</AssemblyName>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>0.0.5</Version>
+		<Version>0.0.8</Version>
 		<Company>CodeB</Company>
 		<Authors>CodeB</Authors>
 		<Description>Razor Class library</Description>
@@ -40,8 +40,8 @@
 
 	<!-- Only pack on rlease. This allows for debugging -->
 	<Target Condition="'$(Configuration)' == 'Release'" Name="CopyPackage" AfterTargets="Pack">
-		<!--<Copy SourceFiles="$(ProjectDir)\bin\Release\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\mcasas\Desktop\PublishedApps\Rcl" />-->
-    <Copy SourceFiles="$(ProjectDir)\bin\Release\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\mc\Desktop\PublishedApps\Rcl" />
+		<Copy SourceFiles="$(ProjectDir)\bin\Release\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\mcasas\Desktop\PublishedApps\Rcl" />
+    <!--<Copy SourceFiles="$(ProjectDir)\bin\Release\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="C:\Users\mc\Desktop\PublishedApps\Rcl" />-->
 	</Target>
 
 </Project>

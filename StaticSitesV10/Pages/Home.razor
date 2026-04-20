@@ -51,7 +51,7 @@ else
         @if(string.IsNullOrEmpty(SiteStructure.HeroItem?.LayoutModule)){
 
             //assign the default template
-            SetHeroComponent("LargeHero");
+            SetHeroComponent(DEFAULT_HERO);
 
         }else {
 
@@ -141,7 +141,7 @@ else
 
     bool IsProd=true;
 
-    const string DefaultHero = "LargeHero";
+    const string DEFAULT_HERO = "ChatGptHero";
     bool IsTheme1;
     string ThemeName = "theme-1";
     string PhyAddress = string.Empty;
@@ -199,7 +199,7 @@ else
 
             if (string.IsNullOrEmpty(SiteStructure.HeroItem.LayoutModule))
             {
-                InitializeHeroControls(HeroVm, DefaultHero);
+                InitializeHeroControls(HeroVm, DEFAULT_HERO);
             }
             else
             {
@@ -210,7 +210,7 @@ else
 
     private void InitializeHeroControls(HeroItemVm hero, string controlName)
     {
-        InitComponents(hero);      
+        InitComponents(hero); 
         SelectedComponent = PublicComponents[controlName];
     }
 

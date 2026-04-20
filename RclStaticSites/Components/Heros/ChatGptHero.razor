@@ -1,0 +1,43 @@
+﻿<div class="b-example-divider"></div>
+
+@if (HeroItem is not null)
+{
+    <section class="hero">
+
+        <img src="@HeroItem.FullImageUrl" class="hero-img" alt="Hero background" />
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="container">
+               @*  <div class="row">
+                    <div class="col-lg-6">      *@                 
+                        
+                        <div class="d-flex justify-content-center align-items-center h-100">
+
+                            <div class="text-white">
+                                <h1 class="mb-3">@HeroItem.Title</h1>
+                                <br />
+                                <h4 class="mb-3">@HeroItem.SubTitle</h4>
+                            </div>
+
+                            @if (!string.IsNullOrEmpty(HeroItem.ActionTitle))
+                            {
+                                <h4 class="mb-3">@HeroItem.ActionTitle</h4>
+                                <a class="btn btn-primary btn-lg" href="@HeroItem.ActionUrl" role="button">@HeroItem.ActionTitle</a>
+                            }
+                        </div>
+
+                  @*   </div>
+                </div> *@
+            </div>
+        </div>
+
+    </section>
+}
+
+@code {
+
+    [Parameter]
+    public HeroItemVm? HeroItem { get; set; }
+}

@@ -17,6 +17,13 @@ namespace StaticSitesV10.Services
             Dictionary<string, ComponentMetadata> components =
               new()
               {
+                  [nameof(ChatGptHero)] = new ComponentMetadata()
+                  {
+                      Type = typeof(ChatGptHero),
+                      Name = "Chat Gpt Hero",
+                      Parameters = { [nameof(ChatGptHero.HeroItem)] = hero }
+                  },
+
                   [nameof(LargeHero)] = new ComponentMetadata()
                   {
                       Type = typeof(LargeHero),

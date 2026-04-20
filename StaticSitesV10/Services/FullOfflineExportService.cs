@@ -4,7 +4,6 @@ using System.Text.RegularExpressions;
 
 namespace StaticSitesV10.Services
 {
-
     public class FullOfflineExportService
     {
         private readonly IJSRuntime _js;
@@ -22,13 +21,24 @@ namespace StaticSitesV10.Services
 
             var html = await _js.InvokeAsync<string>("fullOfflineExport", url);
 
-            var minified = Minify(html);
+            var OutputHtml = MinifyFile(html);
 
             await _js.InvokeVoidAsync(
                 "downloadFile",
                 GenerateFileName(fileName),
-                minified
+                OutputHtml
             );
+        }
+
+        private string MinifyFile(string html, bool applyMinification = false)
+        {
+            if (applyMinification)
+            {
+                return Minify(html);
+            }else
+            {
+                return html;
+            }
         }
 
         private string Minify(string html)
