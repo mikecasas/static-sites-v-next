@@ -1,5 +1,4 @@
 <Solution>
-  <Project Path="BlazorStaticMinimalBlog/BlazorStaticMinimalBlog.csproj" />
   <Project Path="RclStaticSites/RclStaticSites.csproj" Id="26bd5f46-3e6d-4ded-b463-dbb2e3af6a9b" />
   <Project Path="StaticSitesV10/StaticSitesV10.csproj" />
   <Project Path="TestSite/TestSite.csproj" Id="ac64d3ea-38be-4be7-a21c-82100c0cf233" />
