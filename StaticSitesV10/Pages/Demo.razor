@@ -1,6 +1,8 @@
 ﻿@page "/"
 @page "/demo"
 
+@inject IJSRuntime JS
+
 <h3>Demo</h3>
 
 <a href="home/code-buoy/lobbyist-tracker">LT</a>
@@ -26,6 +28,13 @@
 <a href="export-pages-two">Export Pages Two</a>
 <a href="export-pages-three">Export Pages Three</a>
 
+<button @onclick="ExportHtml">Export HTML</button>
+
 @code {
 
+
+    async Task ExportHtml()
+    {
+        await JS.InvokeVoidAsync("downloadRenderedHtml", "export.html");
+    }
 }
