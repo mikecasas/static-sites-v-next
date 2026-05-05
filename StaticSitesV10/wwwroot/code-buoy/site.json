@@ -22,7 +22,7 @@
     "TenantName": "code-buoy",
     "Title": "Code Buoy",
     "SubTitle": "Software & Technology solutions geared toward Small Business and Local Government",
-    "ImageUrl": "/bg_compressed_25.jpg",
+    "ImageUrl": "bg_compressed_25.jpg",
     "ActionTitle": null
   },
   "AboutUsItem": {
@@ -32,7 +32,7 @@
     "ItemList": [ "Business & Personal Websites", "Invoicing & Payments", "Scheduling & Appointment applications", "API Integration", "Data Conversion", "Custom Software Development", "All U.S. Based" ],
     "ListHeader": null,
     "ListFooter": null,
-    "MainImageUrl": "/about_us_compressed_25.jpg",
+    "MainImageUrl": "about_us_compressed_25.jpg",
     "SubImageUrl": null,
     "Item1Title": "Our History",
     "Item2Title": "",
@@ -73,7 +73,7 @@
       "Title": "Lobbyist Tracker",
       "Descr": "Record interactions between Lobbyists and Public Officials",
       "Price": "",
-      "ImageUrl": "/products/lobbyist-tracker.png",
+      "ImageUrl": "products/lobbyist-tracker.png",
       "ActionButtonText": "More Info",
       "ActionButtonUrl": "https://codebuoy.dev/lobbyist-tracker"
     },
@@ -81,7 +81,7 @@
       "Title": "Simple Sites",
       "Descr": "$75 Website Templates to get online fast",
       "Price": "",
-      "ImageUrl": "/products/simple-sites.png",
+      "ImageUrl": "products/simple-sites.png",
       "ActionButtonText": "More Info",
       "ActionButtonUrl": "https://simple-sites.codebuoy.dev"
     }

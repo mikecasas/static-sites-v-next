@@ -57,32 +57,32 @@
     {
       "Title": "Eggplant",
       "Descr": "Our House Specality",
-      "ImageUrl": "/gallery/image_1.jpg"
+      "ImageUrl": "gallery/image_1.jpg"
     },
     {
       "Title": "Mussels",
       "Descr": "Our House Specality",
-      "ImageUrl": "/gallery/image_2.jpg"
+      "ImageUrl": "gallery/image_2.jpg"
     },
     {
       "Title": "Mussels",
       "Descr": "Our House Specality",
-      "ImageUrl": "/gallery/image_3.jpg"
+      "ImageUrl": "gallery/image_3.jpg"
     },
     {
       "Title": "Pizza",
       "Descr": "Our House Specality",
-      "ImageUrl": "/gallery/image_4.jpg"
+      "ImageUrl": "gallery/image_4.jpg"
     },
     {
       "Title": "Spaghetti",
       "Descr": "Our House Specality",
-      "ImageUrl": "/gallery/image_5.jpg"
+      "ImageUrl": "gallery/image_5.jpg"
     },
     {
       "Title": "Linguini & Clams",
       "Descr": "Our House Specality",
-      "ImageUrl": "/gallery/image_6.jpg"
+      "ImageUrl": "gallery/image_6.jpg"
     }
   ],
 

@@ -18,7 +18,7 @@
     "TenantName": "demo-pool",
     "Title": "A.J.'s Pool Service",
     "SubTitle": "Keeping South Florida pools sparkling clean",
-    "ImageUrl": "/pool-example_compressed_25.jpg",
+    "ImageUrl": "pool-example_compressed_25.jpg",
     "ActionTitle": null,
     "LayoutModule": ""
   },
@@ -29,7 +29,7 @@
     "ItemList": [ "Dependable", "Trustworthy", "We use all natural chemicals" ],
     "ListHeader": null,
     "ListFooter": null,
-    "MainImageUrl": "/pool-about_us_compressed_25.jpg",
+    "MainImageUrl": "pool-about_us_compressed_25.jpg",
     "SubImageUrl": null,
     "Item1Title": "Standard Residental Service Contract",
     "Item2Title": "Our History",
