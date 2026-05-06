@@ -17,7 +17,7 @@
   "HeroItem": {
     "Title": "Budget Metric",
     "SubTitle": "A software solution to record narratives and performance measures for your organization",
-    "ImageUrl": "/friday-consulting.jpg",
+    "ImageUrl": "friday-consulting.jpg",
     "ActionTitle": "Email Us",
     "ActionUrl": "mailto:info@codebuoy.dev",
     "LayoutModule": "RightAligned"
@@ -28,7 +28,7 @@
     "ItemList": [ "Complete software solution running in the cloud", "No Software to install", "Simple pricing structure" ],
     "ListHeader": null,
     "ListFooter": null,
-    "MainImageUrl": "/about_us_compressed_25.jpg",
+    "MainImageUrl": "about_us_compressed_25.jpg",
     "SubImageUrl": null
   },
   "Email": "info@codebuoy.dev",
