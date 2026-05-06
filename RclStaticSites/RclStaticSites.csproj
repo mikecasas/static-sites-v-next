@@ -8,7 +8,7 @@
 		<RootNamespace>RclStaticSites</RootNamespace>
 		<AssemblyName>RclStaticSites</AssemblyName>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>0.0.8</Version>
+		<Version>0.0.10</Version>
 		<Company>CodeB</Company>
 		<Authors>CodeB</Authors>
 		<Description>Razor Class library</Description>

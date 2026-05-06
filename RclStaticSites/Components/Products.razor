@@ -1,0 +1,41 @@
+﻿@if (ProductGroup != null)
+{
+    <section style="background-color: #eee;">
+        <div class="text-center container py-5">
+
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase mb-4">@Title</h2>
+            </div>
+
+            <div class="row">
+                @foreach (var i in ProductGroup.FullProducts)
+                {
+                    <ProductCard ImageUrl="@i.ImageUrl"
+                        Title="@i.Title"
+                        Description="@i.Descr"
+                        Price="@i.Price"
+                        IsNew="true"
+                        IsEco="true"
+                        Discount="-10%"
+                        ShowButton="true"
+                        ButtonText="More Information" />
+                }
+            </div>
+
+        </div>
+    </section>
+
+    @*     <StaticSitesV10.Components.MikeCustom.Modals.BasicModal></StaticSitesV10.Components.MikeCustom.Modals.BasicModal> *@
+
+}
+
+@code {
+
+    private RclStaticSites.Components.Modals.BasicModal? Modal { get; set; }
+
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public ProductGroup? ProductGroup { get; set; }
+}

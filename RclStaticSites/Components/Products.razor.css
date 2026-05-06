@@ -1,0 +1,12 @@
+﻿.product-item {
+    background: no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    transition: transform 2s;
+}
+
+.product-item:hover {
+    transform: scale(1.15);
+}

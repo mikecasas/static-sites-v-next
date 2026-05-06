@@ -32,13 +32,22 @@
   "ProductTitle": "Our Products",
   "ProductItems": [
     {
+      "Title": "Ring",
+      "Descr": "1.0 CTW",
+      "Price": "$799.99",
+      "ImageUrl": "products/ring.jpg",
+      "ActionButtonText": "More Information",
+      "ActionButtonUrl": "",
+      "UseModal": true
+    },
+    {
       "Title": "Headphones",
       "Descr": "Noise Cancelling",
       "Price": "$24.99",
       "ImageUrl": "products/headphone.jpg",
       "ActionButtonText": "More Information",
       "ActionButtonUrl": "",
-      "UseModal":  true
+      "UseModal": true
     },
     {
       "Title": "Heels",
@@ -63,6 +72,15 @@
       "Descr": "Great Present for Dad",
       "Price": "$10.00",
       "ImageUrl": "products/watch.jpg",
+      "ActionButtonText": "More Information",
+      "ActionButtonUrl": "",
+      "UseModal": true
+    },
+    {
+      "Title": "Bracelet",
+      "Descr": "2.0 CTW",
+      "Price": "$1,999.99",
+      "ImageUrl": "products/bracelet.jpg",
       "ActionButtonText": "More Information",
       "ActionButtonUrl": "",
       "UseModal": true
