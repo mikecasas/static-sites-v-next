@@ -3,7 +3,6 @@
     "https": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "home/demo-shop",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

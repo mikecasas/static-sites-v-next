@@ -1,4 +1,6 @@
-﻿<div class="b-example-divider"></div>
+﻿@using RclStaticSites.Components.Dry
+
+<div class="b-example-divider"></div>
 
 <section class="page-section" id="services">
     <div class="container">
@@ -15,10 +17,9 @@
 
                     @foreach (var i in HighlightItems)
                     {         
-                        <div class="col-md-4">
-                            <StaticSitesV10.Components.MikeCustom.Dry.HighlightElement i="@i"></StaticSitesV10.Components.MikeCustom.Dry.HighlightElement>
+                        <div class="col-4">
+                            <HighlightElement i="@i"></HighlightElement>
                         </div>
-
                     }
                 </div>
                
@@ -28,8 +29,8 @@
 
                      @foreach (var i in HighlightItems)
                     {
-                        <div class="col-md-6">
-                        <StaticSitesV10.Components.MikeCustom.Dry.HighlightElement i="@i"></StaticSitesV10.Components.MikeCustom.Dry.HighlightElement>
+                        <div class="col-6">
+                            <HighlightElement i="@i"></HighlightElement>
                         </div>
                     }
                  

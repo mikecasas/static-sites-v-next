@@ -10,11 +10,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.4" PrivateAssets="all" />
-    <PackageReference Include="RclStaticSites" Version="0.0.10" />
+    <PackageReference Include="RclStaticSites" Version="0.0.15" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="BlogContent\" />
+    <Folder Include="wwwroot\iguanas\img\" />
   </ItemGroup>
 
   <!--<ItemGroup>

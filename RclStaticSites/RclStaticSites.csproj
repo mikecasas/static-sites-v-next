@@ -8,9 +8,9 @@
 		<RootNamespace>RclStaticSites</RootNamespace>
 		<AssemblyName>RclStaticSites</AssemblyName>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>0.0.10</Version>
-		<Company>CodeB</Company>
-		<Authors>CodeB</Authors>
+		<Version>0.0.15</Version>
+		<Company>Code Buoy</Company>
+		<Authors>Code Buoy</Authors>
 		<Description>Razor Class library</Description>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 

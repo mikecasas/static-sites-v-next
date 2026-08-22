@@ -75,7 +75,8 @@
       "Price": "",
       "ImageUrl": "products/lobbyist-tracker.png",
       "ActionButtonText": "More Info",
-      "ActionButtonUrl": "https://codebuoy.dev/lobbyist-tracker"
+      "ActionButtonUrl": "https://codebuoy.dev/lobbyist-tracker",
+      "UseModal": false
     },
     {
       "Title": "Simple Sites",
@@ -83,7 +84,8 @@
       "Price": "",
       "ImageUrl": "products/simple-sites.png",
       "ActionButtonText": "More Info",
-      "ActionButtonUrl": "https://simple-sites.codebuoy.dev"
+      "ActionButtonUrl": "https://simple-sites.codebuoy.dev",
+      "UseModal": false
     }
   ],
   "PriceItem": {

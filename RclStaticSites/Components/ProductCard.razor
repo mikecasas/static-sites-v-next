@@ -1,4 +1,5 @@
-﻿<div class="col-lg-4 col-md-12 mb-4">
+﻿<div class="mb-4">
+
     <div class="card h-100 d-flex flex-column">
 
         <!-- Image -->
@@ -47,9 +48,15 @@
 
             @if (ShowButton)
             {
-                <button class="btn btn-primary mt-auto" @onclick="OnClick">
-                    @ButtonText
-                </button>
+                @if (UseModal)
+                {
+                    <button class="btn btn-primary mt-auto" @onclick="OnClick">
+                        @ButtonText
+                    </button>
+                }else
+                {
+                    <a href="@ActionButtonUrl" class="btn btn-primary mt-auto">@ButtonText</a>
+                }               
             }
 
         </div>
@@ -73,4 +80,6 @@
     [Parameter] public bool ShowButton { get; set; } = false;
     [Parameter] public string ButtonText { get; set; } = "Buy";
     [Parameter] public EventCallback OnClick { get; set; }
+    [Parameter] public bool UseModal { get; set; }
+    [Parameter] public string? ActionButtonUrl { get; set; }
 }

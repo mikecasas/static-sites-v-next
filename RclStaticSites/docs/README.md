@@ -1,4 +1,4 @@
-# Pembroke Pines Intranet Razor Class Libary
+# Code Buoy Static Sites Razor Class Libary
 
 * The nuget package for all intranet portals
 * Common code for all intranet portals including:

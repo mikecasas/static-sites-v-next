@@ -83,7 +83,8 @@ else
 
     @if (SiteStructure.DisplayHighlights)
     {
-        <RclStaticSites.Components.Highlights Title="@SiteStructure.HighlightTitle" SubTitle="@SiteStructure.HighlightSubTitle" HighlightItems="@SiteStructure.HighlightItems"></RclStaticSites.Components.Highlights>
+        <RclStaticSites.Components.Highlights Title="@SiteStructure.HighlightTitle" SubTitle="@SiteStructure.HighlightSubTitle" 
+            HighlightItems="@SiteStructure.HighlightItems"></RclStaticSites.Components.Highlights>
     }
 
     @if (SiteStructure.DisplayAbout)
@@ -172,7 +173,7 @@ else
 
     IEnumerable<string>? PageKeywords;
 
-    private string CacheBustId = "?v=2025-11-09-1233313";
+    private string CacheBustId = "?v=2026-8-09-1233313";
     private ComponentMetadata? SelectedComponent;
 
     Dictionary<string, ComponentMetadata>? PublicComponents;
@@ -303,7 +304,7 @@ else
         }
     }    
 
-    private void SetProducts(SiteStructure site,string relativeLocation)
+    private void SetProducts(SiteStructure site, string relativeLocation)
     {
         TheProductGroup = new ProductGroup();
         TheProductGroup.LeadingPath = relativeLocation;
