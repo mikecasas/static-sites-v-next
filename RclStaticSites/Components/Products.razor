@@ -10,30 +10,28 @@
             <div class="row">
                 @foreach (var i in ProductGroup.FullProducts)
                 {
-
                     @if ((ItemCount == 3) || (ItemCount == 6) || (ItemCount == 9))
                     {
-
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
 
                             <ProductCard ImageUrl="@i.ImageUrl"
-                                         Title="@i.Title"
-                                         Description="@i.Descr"
-                                         Price="@i.Price"
-                                         IsNew="true"
-                                         IsEco="true"
-                                         Discount="-10%"
-                                         ShowButton="true"
-                                         UseModal="@i.UseModal"
-                                         ActionButtonUrl="@i.ActionButtonUrl"
-                                         ButtonText="@i.ActionButtonText" />
+                                Title="@i.Title"
+                                Description="@i.Descr"
+                                Price="@i.Price"
+                                IsNew="true"
+                                IsEco="true"
+                                Discount="-10%"
+                                ShowButton="true"
+                                UseModal="@i.UseModal"
+                                ActionButtonUrl="@i.ActionButtonUrl"
+                                ButtonText="@i.ActionButtonText" />
 
                         </div>
                     }
                     else
                     {
 
-                        <div class="col-6">                
+                        <div class="col-12 col-md-6">                
 
                             <ProductCard ImageUrl="@i.ImageUrl"
                                 Title="@i.Title"
