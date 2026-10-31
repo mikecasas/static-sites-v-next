@@ -28,42 +28,42 @@
     "ListFooter": null,
     "MainImageUrl": "about_us.jpg",
     "SubImageUrl": null,
-    "Item1Title": "Standard Residental Service Contract",
-    "Item2Title": "Our History",
-    "Item1Description": "!!!!!",
-    "Item2Description": "...."
+    "Item1Title": "Shipping and Freight Forwarding",
+    "Item2Title": "Prices",
+    "Item1Description": "We can transport the most complex and fragile items accross the country and accross the world.",
+    "Item2Description": "Call us for a quote (555) 555-5555"
   },
   "Email": "aj@example.com",
   "Phone": "555-555-1212",
-  "SiteTitle": null,
+  "SiteTitle": "Trucking and Hauling",
   "HighlightTitle": "Transportation Services",
   "HighlightSubTitle": "We move and haul all your commodities",
   "HighlightItems": [
     {
-      "Title": "Title 1",
-      "Descr": "Icon Highlights go here",
-      "IconName": "coins"    
+      "Title": "Get a Quote",
+      "Descr": "Estimate your LTL shipping costs in seconds, so you can plan and budget with confidence.",
+      "IconName": "coins"
     },
     {
-      "Title": "Title 1",
-      "Descr": "Icon Highlights go here",
+      "Title": "Book a Shipment",
+      "Descr": "Schedule your freight pickup with a partner known for damage-free, on-time delivery. ",
       "IconName": "tachometer-alt"
     },
     {
-      "Title": "Title 1",
-      "Descr": "Icon Highlights go here",
+      "Title": "Track Your Frieght",
+      "Descr": "Enter up to 25 PRO numbers to get real-time updates on every shipment at once.",
       "IconName": "cogs"
     }
   ],
   "Products": null,
   "Blogs": [
     {
-      "Title": "Blog 1",
-      "Descr": "sdfdsf   sddsfds sf sdf"
+      "Title": "Our Investments Create Your Competitive Advantage!",
+      "Descr": "Discover how our investment in our fleet delivers on time savings for you"
     },
     {
-      "Title": "Blog 2",
-      "Descr": "sdsfsdsdfdsfsdf"
+      "Title": "How Does Our Pricing Work?",
+      "Descr": "Avoid freigt surprises when you sign your contract"
     }
   ],
   "Keywords": ""
